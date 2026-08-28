@@ -32,10 +32,10 @@ renderer, or Pillow; those remain runtime prerequisites described above.
 
 ### From GitHub
 
-**Publication status:** the planned repository is
-[`syi0808/svg-skills`](https://github.com/syi0808/svg-skills). The commands below
-are for use after these files are published there; remote downloading has not
-yet been verified. Local installation already works using the next section.
+Install directly from the public repository
+[`syi0808/svg-skills`](https://github.com/syi0808/svg-skills). Remote discovery
+and individual installation of both skills were verified on 2026-08-28 with
+`skills@1.5.23`.
 
 List available skills without installing:
 
@@ -97,23 +97,23 @@ For a new illustration:
 With a source image attached:
 `$image-to-svg 이 이미지를 원본 비율과 색상을 유지한 편집 가능한 SVG로 변환해줘.`
 
-### Publishing This Collection
+### Repository Layout
 
-Publish both skill folders and this README to `syi0808/svg-skills`, retaining
-each skill's own scripts and references. The CLI discovers the existing
+Both skill folders and this README live in `syi0808/svg-skills`, with each skill
+retaining its own scripts and references. The CLI discovers the existing
 `vector-illustration/SKILL.md` and `image-to-svg/SKILL.md` layout; no npm package,
 custom installer, or separate skill manifest is needed. Do not add a root
 `SKILL.md` that would describe the whole collection as a single skill.
 
-After publication, verify remote discovery with
-`npx skills add syi0808/svg-skills --list` before sharing the download command,
-then update the publication-status notice to reflect the verified result.
-Private repositories require the user's configured Git credentials.
+Before sharing future releases, verify remote discovery with
+`npx skills add syi0808/svg-skills --list`. Installing from a private fork requires
+the user's configured Git credentials.
 
-Local discovery, individual installation of each skill, and combined installation
-were verified with `skills@1.5.23` in temporary home directories. Installed scripts,
-references, and metadata matched the source files; their validation and 96px
-rendering checks passed. Remote downloading remains unverified until publication.
+Local discovery, individual and combined local installation, and individual
+GitHub downloads were verified with `skills@1.5.23` in temporary home directories.
+Installed scripts, references, and metadata matched the source files. Validation
+passed, and each downloaded skill's 96px render matched the existing preview
+exactly. The user's existing skill installations were not modified.
 
 ### Conversion Test
 
