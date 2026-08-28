@@ -1,4 +1,4 @@
-# Vector Illustration
+# SVG Skills
 
 An **agent-driven clean-room skill** for creating and refining editable SVG
 illustrations through semantic planning, SVG authoring, and rendered visual
