@@ -1,31 +1,62 @@
 # SVG Skills
 
-An **agent-driven clean-room skill** for creating and refining editable SVG
+An **agent-driven clean-room skill collection** for creating and refining editable SVG
 illustrations through semantic planning, SVG authoring, and rendered visual
 review. Here, "clean-room" describes a specification-first development approach,
 not a claim of a strictly isolated or legally certified clean-room process.
 
 ## Skills
 
+- [Illustration Plan](illustration-plan/SKILL.md): choose a visual direction,
+  resolve consequential ambiguities, and write a semantic scene plan without
+  generating artwork or precomputing SVG geometry.
 - [Vector Illustration](vector-illustration/SKILL.md): create new SVG artwork,
-  refine existing vectors, or develop illustrations inspired by a visual reference.
+  refine existing vectors, and coordinate planning, optional image guidance,
+  selected raster reconstruction, and final rendered review.
 - [Image to SVG](image-to-svg/SKILL.md): convert a supplied raster image into
   editable vector geometry while preserving its shapes, layout, colors, and
   negative space. Covers semantic reconstruction and optional local tracing, with
   source-to-render review rather than bitmap embedding.
 
-Image to SVG follows the semantic-part and rendered-review approach of Vector
-Illustration, with source fidelity rather than new composition as its default.
-Each skill includes its own scripts and reference documents and works without the
-other skill installed. Helpers are bundled as regular files, not shared symlinks
-or cross-skill imports. Python 3.10+ is required; rendering needs `rsvg-convert` or
-CairoSVG, and pixel comparison needs Pillow. Image to SVG does not bundle a tracer
-or claim lossless conversion of photographs.
+These are composable capabilities, not three mandatory steps. Planning-only
+requests stop at Illustration Plan. Faithful raster conversion goes directly to
+Image to SVG without redesign or image generation. A small SVG edit stays local.
+New compositions use planning before direct SVG authoring; generated image guidance
+is optional and does not automatically replace the best accepted vector.
+
+Each skill bundles regular scripts and references, with no cross-skill Python
+imports or runtime symlinks. Vector Illustration reads the other skills when
+available, but has a direct-authoring fallback when they are absent. Python 3.10+
+is sufficient for planning and validation. Rendering needs `rsvg-convert` or
+CairoSVG, and pixel comparison needs Pillow. No skill bundles an image model,
+tracer, or GPU optimizer, or claims lossless conversion of photographs.
+
+### Scene Contract
+
+New scenes use version 2: `phase: "plan"` records art direction, semantic IDs,
+roles, and prose constraints without exact SVG tags or parents. After SVG authoring,
+the producer adds actual mappings and sets `phase: "bound"`. Existing version 1
+maps remain supported without migration. A scene is not a geometry compiler.
+
+```bash
+python3 illustration-plan/scripts/validate_scene.py examples/moon-flight/scene.plan.json
+python3 vector-illustration/scripts/validate_svg.py examples/moon-flight/artwork.svg --scene examples/moon-flight/scene.json
+```
+
+The [planning example](examples/moon-flight/scene.plan.json) describes the existing
+Moon Flight artwork in the new format; the original v1 map stays unchanged for
+compatibility. Structural validation is not a design-quality or fidelity verdict.
+
+The canonical scene contract lives in `illustration-plan/references/scene-model.md`
+and `illustration-plan/scripts/{scene_utils,validate_scene}.py`. Production skills
+bundle identical copies so they remain independently installable. Maintainers can
+check synchronization with `python3 scripts/sync_scene_contract.py` and refresh
+copies after changing the canonical files with the same command plus `--write`.
 
 ## Install with `npx skills`
 
 Use the [Skills CLI](https://github.com/vercel-labs/skills#install-a-skill) to
-download and install either skill. You need Node.js/npm (`npx`) and Git for remote
+download and install the skills you need. You need Node.js/npm (`npx`) and Git for remote
 repository installs. The CLI version tested here, `skills@1.5.23`, requires
 Node.js 22.20.0 or newer. Installing a skill does not install Python, an SVG
 renderer, or Pillow; those remain runtime prerequisites described above.
@@ -34,8 +65,10 @@ renderer, or Pillow; those remain runtime prerequisites described above.
 
 Install directly from the public repository
 [`syi0808/svg-skills`](https://github.com/syi0808/svg-skills). Remote discovery
-and individual installation of both skills were verified on 2026-08-28 with
-`skills@1.5.23`.
+and individual installation of the original Vector Illustration and Image to SVG
+were verified on 2026-08-28 with `skills@1.5.23`. The new three-skill layout is
+available in this checkout; GitHub installs include it only after this revision
+is published. Use local installation when working ahead of the published branch.
 
 List available skills without installing:
 
@@ -43,38 +76,40 @@ List available skills without installing:
 npx skills add syi0808/svg-skills --list
 ```
 
-Install only the skill you need:
+After the three-skill revision is published, install only the skill you need:
 
 ```bash
+npx skills add syi0808/svg-skills --skill illustration-plan --agent codex --global --copy
 npx skills add syi0808/svg-skills --skill vector-illustration --agent codex --global --copy
 npx skills add syi0808/svg-skills --skill image-to-svg --agent codex --global --copy
 ```
 
-Or install both in one command:
+Or install all three in one command:
 
 ```bash
-npx skills add syi0808/svg-skills --skill vector-illustration image-to-svg --agent codex --global --copy
+npx skills add syi0808/svg-skills --skill illustration-plan vector-illustration image-to-svg --agent codex --global --copy
 ```
 
 `--skill` selects the skill, `--agent codex` targets Codex, and `--global` makes
 it available across projects. Omit `--global` for project-local installation.
 `--copy` installs regular files rather than agent-directory symlinks. Each
 selected skill includes its own `SKILL.md`, `agents/`, `references/`, and
-`scripts/`; it does not depend on the other skill or this checkout after install.
+`scripts/`; its helpers do not depend on sibling skills or this checkout after install.
 Reinstalling can replace a same-name installation, so preserve local edits or
 existing development links before doing so.
 
 ### From a Local Checkout
 
-Run from this project's root to discover the two skills:
+Run from this project's root to discover the three skills:
 
 ```bash
 npx skills add . --list
 ```
 
-Install either folder independently, or run both commands:
+Install a folder independently, or run all three commands:
 
 ```bash
+npx skills add ./illustration-plan --agent codex --global --copy
 npx skills add ./vector-illustration --agent codex --global --copy
 npx skills add ./image-to-svg --agent codex --global --copy
 ```
@@ -91,17 +126,27 @@ For other coding agents and supported source URLs, see the
 
 ### Usage
 
+For visual directions or a scene plan only:
+`$illustration-plan 온보딩 일러스트의 분위기와 구성을 먼저 제안해줘. 아직 그림은 만들지 마.`
+
 For a new illustration:
 `$vector-illustration 달 위를 비행하는 로켓 일러스트를 SVG로 만들어줘.`
 
 With a source image attached:
 `$image-to-svg 이 이미지를 원본 비율과 색상을 유지한 편집 가능한 SVG로 변환해줘.`
 
+For a local edit without replanning or image generation:
+`$vector-illustration 이 SVG의 창문만 조금 크게 바꿔줘. 나머지는 유지해줘.`
+
+These are intended routing examples, not an independent model-routing benchmark.
+Image generation is never required merely because a capability is installed.
+
 ### Repository Layout
 
-Both skill folders and this README live in `syi0808/svg-skills`, with each skill
+All three skill folders and this README live in `syi0808/svg-skills`, with each skill
 retaining its own scripts and references. The CLI discovers the existing
-`vector-illustration/SKILL.md` and `image-to-svg/SKILL.md` layout; no npm package,
+`illustration-plan/SKILL.md`, `vector-illustration/SKILL.md`, and
+`image-to-svg/SKILL.md` layout; no npm package,
 custom installer, or separate skill manifest is needed. Do not add a root
 `SKILL.md` that would describe the whole collection as a single skill.
 
@@ -109,11 +154,21 @@ Before sharing future releases, verify remote discovery with
 `npx skills add syi0808/svg-skills --list`. Installing from a private fork requires
 the user's configured Git credentials.
 
-Local discovery, individual and combined local installation, and individual
-GitHub downloads were verified with `skills@1.5.23` in temporary home directories.
+Before the three-skill revision, local discovery, individual and combined local
+installation, and individual GitHub downloads were verified with `skills@1.5.23`
+in temporary home directories.
 Installed scripts, references, and metadata matched the source files. Validation
 passed, and each downloaded skill's 96px render matched the existing preview
 exactly. The user's existing skill installations were not modified.
+
+The three-skill revision was checked locally on 2026-08-28 with `skills@1.5.23`
+and Node.js 24.18.0: discovery finds all three skills, and combined copy installation
+works in an isolated home. Each copied skill then runs independently. A temporary
+harness covers 75 scene cases across the three copies, including v1 compatibility,
+plan/bound transitions, malformed input, and resource limits. Both production
+skills reproduce the original 768px and 96px PNGs byte-for-byte. Live image
+generation and independent agent routing were not exercised; the routing examples
+above describe intended behavior rather than a measured model-success rate.
 
 ### Conversion Test
 
@@ -123,7 +178,8 @@ new vector and compares 768px and 96px renders. The report includes artifacts,
 visual corrections, measurements, and the limits of this single-case test.
 
 The development and research notes below describe the original Vector
-Illustration skill; Image to SVG adds a source-driven conversion workflow.
+Illustration skill. Image to SVG adds source-driven conversion, while Illustration
+Plan makes art direction and semantic planning independently reusable.
 
 ## Agent-Driven Development
 

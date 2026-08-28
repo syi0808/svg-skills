@@ -6,6 +6,12 @@ Python 3.10+ is needed. Validation, measurement, and normalization use only the
 standard library. Rendering requires an installed `rsvg-convert` or CairoSVG;
 comparison requires Pillow.
 
+The bundled `validate_scene.py` checks legacy v1 maps and v2 `plan`/`bound` scenes
+without loading SVG. Use it during planning; `validate_svg.py --scene` additionally
+requires a bound map and verifies it against the actual SVG. See
+[scene-model.md](scene-model.md) for the shared contract and the distinction between
+structural checks and visual review.
+
 ## Runtime selection
 
 `render_svg.py --backend auto` prefers `rsvg-convert`, then checks CairoSVG in the
@@ -31,6 +37,7 @@ machine's library path or change the user's global shell configuration.
 ## Commands
 
 ```bash
+python3 "$SKILL_DIR/scripts/validate_scene.py" scene.json
 python3 "$SKILL_DIR/scripts/validate_svg.py" art.svg --scene scene.json
 python3 "$SKILL_DIR/scripts/measure_svg.py" art.svg
 python3 "$SKILL_DIR/scripts/render_svg.py" art.svg --output preview.png --width 1024

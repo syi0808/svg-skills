@@ -8,6 +8,8 @@ import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
 
+from scene_utils import SceneError, inspect_scene
+
 
 SVG_NS = "http://www.w3.org/2000/svg"
 XLINK_NS = "http://www.w3.org/1999/xlink"
@@ -107,15 +109,6 @@ def absolute_pixels(value):
     if not math.isfinite(pixels):
         raise SVGError("Absolute length exceeds the finite pixel range")
     return pixels
-
-
-def finite_json_number(value):
-    if type(value) not in {int, float}:
-        return False
-    try:
-        return math.isfinite(value)
-    except OverflowError:
-        return False
 
 
 def path_segments(data):
@@ -333,51 +326,31 @@ def inspect_svg(source):
 
 
 def check_scene(source, root, report):
-    content, byte_count = read_utf8(source)
     try:
-        scene = json.loads(content)
-    except (ValueError, RecursionError) as error:
-        raise SVGError(f"Invalid scene JSON: {error}") from error
+        scene, scene_report = inspect_scene(source, require_bound=True)
+    except SceneError as error:
+        raise SVGError(str(error)) from error
     errors = report["errors"]
-    if not isinstance(scene, dict) or type(scene.get("version")) is not int or scene["version"] != 1:
-        errors.append("Scene must be an object with integer version 1")
+    errors.extend(scene_report["errors"])
+    report["scene"] = str(Path(source).resolve())
+    if not scene_report["valid"]:
         report["valid"] = False
         return
-    if not isinstance(scene.get("intent"), str) or not scene["intent"].strip():
-        errors.append("Scene intent must be a nonempty string")
-    canvas = scene.get("canvas")
-    expected_box = canvas.get("viewBox") if isinstance(canvas, dict) else None
-    if not isinstance(expected_box, list) or len(expected_box) != 4 or not all(
-        finite_json_number(number) for number in expected_box
-    ) or expected_box[2] <= 0 or expected_box[3] <= 0:
-        errors.append("Scene canvas.viewBox needs four finite numbers and positive width/height")
-    elif report["viewBox"] is not None and any(
+    expected_box = scene["canvas"]["viewBox"]
+    if report["viewBox"] is not None and any(
         not math.isclose(actual, expected, rel_tol=1e-9, abs_tol=1e-9)
         for actual, expected in zip(report["viewBox"], expected_box)
     ):
         errors.append("Scene viewBox does not match the SVG")
-    entries = scene.get("elements")
-    if not isinstance(entries, list) or not entries:
-        errors.append("Scene elements must be a nonempty list")
-        report["valid"] = False
-        return
+    entries = scene["elements"]
     nodes = list(walk_elements(root))
     by_id = {element.get("id"): (index, element, ancestors) for index, (element, ancestors) in enumerate(nodes) if element.get("id")}
     seen = set()
     previous_index = -1
     for entry in entries:
-        if not isinstance(entry, dict) or not isinstance(entry.get("id"), str) or not entry["id"]:
-            errors.append("Every scene element needs a nonempty string ID")
-            continue
         identifier = entry["id"]
-        if identifier in seen:
-            errors.append(f"Scene ID {identifier} is duplicated")
-        parent = entry.get("parent")
-        if "parent" not in entry or (parent is not None and (not isinstance(parent, str) or parent not in seen)):
-            errors.append(f"Scene {identifier}: parent must be null or a previously mapped ID")
+        parent = entry["parent"]
         seen.add(identifier)
-        if not isinstance(entry.get("role"), str) or not entry["role"].strip():
-            errors.append(f"Scene {identifier}: role must be a nonempty string")
         if identifier not in by_id:
             errors.append(f"Scene {identifier}: ID missing from SVG")
             continue
@@ -397,7 +370,6 @@ def check_scene(source, root, report):
             local_name(ancestor.tag) in RESOURCE_TAGS for ancestor in ancestors
         ) and element.get("id") not in seen:
             report["warnings"].append(f"Unmapped semantic element: {element.get('id') or local_name(element.tag)}")
-    report["scene"] = str(Path(source).resolve())
     report["valid"] = not errors
 
 

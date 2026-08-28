@@ -6,7 +6,7 @@ from svg_utils import SVGError, check_scene, emit, inspect_svg
 def main():
     parser = argparse.ArgumentParser(description="Check a portable static-vector SVG and optional semantic scene.")
     parser.add_argument("input")
-    parser.add_argument("--scene", help="Optional version 1 scene JSON to check against the SVG")
+    parser.add_argument("--scene", help="Optional bound scene JSON (version 1 or version 2) to check against the SVG")
     arguments = parser.parse_args()
     try:
         root, report = inspect_svg(arguments.input)

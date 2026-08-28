@@ -9,6 +9,10 @@ Resolve `SKILL_DIR` to the directory containing this skill's `SKILL.md`, not the
 current working directory. All commands below use only that directory. Scripts
 never fetch source images, install dependencies, or locate another skill.
 
+The bundled `validate_scene.py` checks v1 maps and v2 `plan`/`bound` scenes without
+loading SVG. `validate_svg.py --scene` requires a bound map and also verifies the
+actual SVG IDs, tags, parents, and order. See [scene-model.md](scene-model.md).
+
 ## Runtime dependencies
 
 Python 3.10+ is required. Validation, measurement, and normalization use only the

@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "phase": "plan",
+  "intent": "A small coral-and-cream rocket flying above a cratered moon in a flat vector illustration",
+  "canvas": {"viewBox": [0, 0, 640, 640], "background": "navy sky inside a warm outer frame"},
+  "art_direction": {
+    "description": "A calm, playful space illustration with warm accents, clear silhouettes, and generous negative space",
+    "mood": "calm and curious",
+    "rendering": "flat vector illustration",
+    "material": "matte, with a small glass reflection in the window",
+    "detail": "recognizable at 96 pixels"
+  },
+  "palette": {"sky": "#14243D", "cream": "#FFF1D4", "coral": "#EF7165", "glass": "#9ED5D2"},
+  "elements": [
+    {"id": "background", "role": "warm outer frame"},
+    {"id": "sky", "role": "midnight sky panel"},
+    {"id": "stars", "role": "sparse sky accents"},
+    {"id": "orbit", "role": "motion cue behind the moon"},
+    {"id": "moon", "role": "cratered setting in the lower right"},
+    {"id": "rocket", "role": "primary subject tilted toward the upper right"},
+    {"id": "rocket.body", "role": "cream hull"},
+    {"id": "rocket.window", "role": "cyan porthole inside the hull"}
+  ],
+  "constraints": [
+    "Keep the rocket visibly separated from the moon",
+    "Keep rocket details attached to or inside the hull",
+    "Preserve negative space and small-size readability"
+  ],
+  "assumptions": ["No lettering is needed"]
+}

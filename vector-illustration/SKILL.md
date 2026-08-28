@@ -1,6 +1,6 @@
 ---
 name: vector-illustration
-description: Create, refine, or repair editable SVG illustrations and icons from text, an existing SVG, or a visual reference. Use for vector artwork that benefits from semantic parts and rendered visual review, not raster-only image generation, general UI implementation, or data-chart generation.
+description: Create, edit, or refine editable SVG illustrations and icons. Coordinate visual planning, direct SVG authoring, optional image-guided enhancement, and rendered review. Use for finished vector artwork or SVG edits, not planning-only requests, faithful raster conversion alone, general UI, or data charts.
 ---
 
 # Vector Illustration
@@ -11,15 +11,18 @@ research runtime. The default workflow needs no model API, GPU, or model weights
 
 ## Choose the smallest useful workflow
 
-- **Create:** identify the subject, parts, layout, and visual language before
-  writing SVG. For a small icon, a brief internal plan is enough.
+- **Planning only:** use `illustration-plan` when available and stop at directions
+  or a scene plan. Do not produce artwork unless requested.
+- **Create:** use `illustration-plan` to choose a visual direction and plan the
+  semantic parts before writing SVG. Keep simple plans short.
 - **Edit or repair:** inspect the existing source and render first. Preserve its
   IDs, visual style, dimensions, and unaffected parts; do not reconstruct the
   whole illustration to make a local change.
 - **Reference-guided:** inspect the supplied image and compare meaningful objects,
   silhouettes, and overlaps. A raster reference is guidance, not the deliverable.
   For faithful raster-to-SVG conversion rather than reference-inspired artwork,
-  prefer `image-to-svg` when available.
+  use `image-to-svg` when available without a new style-planning or image-generation
+  pass. Do not reinterpret a conversion brief as permission to redesign.
 - **Optimize:** stabilize semantics and topology first. Read
   [advanced-refinement.md](references/advanced-refinement.md) for conservative
   cleanup and the limits of optional image-generation or differentiable backends.
@@ -28,28 +31,45 @@ Respect an established icon system or requested renderer. Do not replace a
 code-native/vector deliverable with bitmap generation. Do not automatically add
 image generation, SAM, DiffVG, or external API calls for a request to polish an SVG.
 
+Read a selected sibling skill's `SKILL.md` from its available location before using
+it; do not assume skills are callable programs or live at fixed relative paths.
+Only load the skills needed by the current route. If a sibling is unavailable,
+use the bundled scene contract and direct authoring/review workflow, preserve the
+requested fidelity, and disclose material limitations. Do not install skills or
+toolchains automatically. These helpers work without sibling skills installed.
+
 ## 1. Plan semantic parts
 
-Record the subject, required components, aspect ratio, palette, stroke language,
-background/transparency, and important attachment/occlusion relationships.
-Use reasonable defaults when the brief leaves low-impact details open.
+For new compositions, obtain a `scene.json` from `illustration-plan`. If the brief
+already includes a sufficient plan, reuse it; a local SVG edit does not need a new
+planning pass. When the planning skill is unavailable, record a concise visual
+direction, subject, aspect ratio, background, semantic parts, and constraints using
+the bundled [scene-model.md](references/scene-model.md). Ask only about consequential
+ambiguities; do not require the user to know style terminology.
 
-For multi-part or iterative work, keep a `scene.json` beside the SVG using
-[scene-model.md](references/scene-model.md). Assign stable IDs such as
-`rocket.body`, `rocket.window`, and `moon.surface`, and map them to SVG elements.
-The scene records intent and relationships; it is not an automatic SVG compiler.
+New scenes use version 2, `phase: "plan"`, and an `art_direction.description`.
+Separate mood, rendering language, and material when useful. Assign stable IDs
+such as `rocket.body` and `rocket.window`, but do not invent actual tags or parents
+before authoring. Existing v1 bound maps remain valid and need no forced migration.
+The scene is an intent and editing contract, not a geometry compiler.
 
 ## 2. Construct editable SVG
 
 Read [svg-authoring.md](references/svg-authoring.md) when writing or repairing SVG.
-Prefer editable primitives where they fit, and short
-purposeful paths where they do not. Keep related parts grouped and paint back to
-front. Preserve negative space and intentional asymmetry rather than enforcing
+Prefer editable primitives where they fit, and short purposeful paths where they
+do not. Keep related parts grouped and paint back to front. Preserve negative
+space and intentional asymmetry rather than enforcing
 symmetry mechanically.
 
 Produce a standalone SVG with a finite positive `viewBox`, semantic IDs, and
 accessible `title`/`desc` where useful. Do not embed a raster to imitate vector work.
 Keep an original copy or use separate iteration files before destructive edits.
+
+After authoring, bind a v2 scene by adding actual tags and direct parents, ordering
+entries by SVG paint order, and setting `phase: "bound"`. Add meaningful groups and
+details as they materialize. Keep the scene and SVG synchronized without storing
+coordinates or path data twice. Save candidate scene/SVG pairs separately during
+revisions so a rejected change cannot overwrite the accepted plan or artwork.
 
 ## 3. Validate, render, and actually look
 
@@ -63,8 +83,11 @@ python3 "$SKILL_DIR/scripts/validate_svg.py" artwork.svg --scene scene.json
 python3 "$SKILL_DIR/scripts/render_svg.py" artwork.svg --output preview.png --width 1024
 ```
 
-Omit `--scene` when no scene file is needed. Fix validation errors before using the
-bundled renderer. Its conservative static-vector profile is not the entire SVG
+Use `validate_scene.py scene.json` to check a plan before SVG authoring. An unbound
+plan cannot pass `validate_svg.py --scene`; validate the draft SVG alone or finish
+its mapping first. Omit `--scene` when no scene file is needed.
+Fix validation errors before using the bundled renderer. Its conservative
+static-vector profile is not the entire SVG
 standard: do not silently strip unsupported features from user artwork. Explain
 the limitation and use an appropriate existing renderer only when that input can
 be handled safely.
@@ -89,6 +112,15 @@ Continue beyond that only when the user asks for further iteration.
 For small icons, also render at the intended size. For transparent artwork, check
 both light and dark surroundings. Fix clipping and invisible strokes in the final
 size, not merely in a zoomed preview.
+
+If richer contours or material treatment would benefit from image guidance, read
+[image-guidance.md](references/image-guidance.md). Availability alone is not a
+reason to generate an image. Inspect any generated candidate before accepting it
+as a target; simple SVG corrections should remain direct edits. Use `image-to-svg`
+only for an actual selected raster-to-vector reconstruction task. This workflow
+owns design decisions, integration, and final candidate selection; sibling skills
+do not decide to replace the accepted artwork. Every route ends in SVG validation
+and actual rendered review, including when image generation is unavailable.
 
 ## 5. Clean up only after review
 

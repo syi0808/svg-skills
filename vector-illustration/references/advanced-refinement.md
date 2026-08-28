@@ -17,18 +17,11 @@ requested stylistic feature at the delivery size.
 
 ## Optional raster guidance
 
-Prefer the user's existing reference. If generating a new raster target is
-actually part of the request and an image-generation capability is available,
-follow that capability's own instructions. Keep the composition, silhouette,
-palette, and intended flat/vector treatment constrained in the request.
-
-Do not silently call paid services, upload local references, install model weights,
-or switch to bitmap output to satisfy a request for SVG polish. If those actions
-are needed but not authorized, explain the tradeoff before proceeding. Continue
-with manual vector refinement when a generated target is unnecessary.
-
-Treat the target as a suggestion: preserve user constraints over generated
-details. Reconstruct meaningful vector parts, not pixel-perfect texture.
+Prefer the user's existing reference. Read [image-guidance.md](image-guidance.md)
+only when a generated target could resolve a concrete visual issue within the
+request. It covers capability checks, baseline preservation, selected-part
+conversion, and candidate acceptance. Generated guidance remains optional; it
+does not replace SVG validation or the agent's visual review.
 
 ## Conservative optimization
 

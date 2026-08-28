@@ -11,6 +11,13 @@ is the default; redesign or stylization requires the user's direction.
 No image-generation model, external API, GPU, or tracing package is required.
 This skill includes its own scripts and references; no other skill is required.
 
+For standalone conversion, do not invoke a planning or image-generation skill:
+the supplied image establishes the visual direction. Ask only about consequential
+source or fidelity ambiguities. When a production workflow supplies a selected
+image, optional baseline SVG, and a bounded conversion scope, read
+[vector-handoff.md](references/vector-handoff.md). Return a separate candidate;
+do not take over art direction or start another production workflow.
+
 ## 1. Inspect the actual source
 
 Open the supplied image with an available image-viewing tool before drawing.
@@ -59,6 +66,10 @@ stable IDs such as `bird.body`, `bird.wing`, and `bird.eye` and group related pa
 A separate scene file is useful for complex iterative work, not required for a
 simple conversion. When using one, follow the bundled
 [scene-model.md](references/scene-model.md) schema so its mappings can be validated.
+For a new scene, record observed art direction and semantic parts as a v2 `plan`,
+then add actual tags/parents and set `phase: "bound"` after authoring. Reuse supplied
+plans and existing IDs; preserve v1 maps without requiring migration. A generated
+reference must not override explicit preservation requirements from the handoff.
 
 ## 4. Author genuine vector geometry
 
@@ -93,7 +104,9 @@ python3 "$SKILL_DIR/scripts/validate_svg.py" converted.svg
 python3 "$SKILL_DIR/scripts/render_svg.py" converted.svg --output preview.png --width 768
 ```
 
-Add `--scene scene.json` to validation only when a scene file is present. Choose
+Use `validate_scene.py scene.json` for a plan-only contract check. Add
+`--scene scene.json` to SVG validation only after a scene is bound; the command
+rejects an unbound plan rather than pretending its mapping was verified. Choose
 the preview width for the source or intended display size. Fix validation errors
 before rendering, then actually open the PNG alongside the source. Do not strip
 unsupported source features just to satisfy the bundled static-vector profile.
