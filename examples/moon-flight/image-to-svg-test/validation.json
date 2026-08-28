@@ -1,0 +1,31 @@
+{
+  "valid": true,
+  "input": "examples/moon-flight/image-to-svg-test/converted.svg",
+  "viewBox": [
+    0.0,
+    0.0,
+    768.0,
+    768.0
+  ],
+  "errors": [],
+  "warnings": [],
+  "stats": {
+    "bytes": 3827,
+    "elements": 37,
+    "groups": 5,
+    "drawing_elements": 29,
+    "path_segments": 82,
+    "ids": 36,
+    "by_tag": {
+      "circle": 11,
+      "desc": 1,
+      "ellipse": 1,
+      "g": 5,
+      "path": 15,
+      "rect": 2,
+      "svg": 1,
+      "title": 1
+    }
+  },
+  "scene": "examples/moon-flight/image-to-svg-test/scene.json"
+}

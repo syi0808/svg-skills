@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="artwork.title artwork.description" height="640" role="img" viewBox="0 0 640 640" width="640">
+  <title id="artwork.title">Moon flight</title>
+  <desc id="artwork.description">A coral and cream rocket flies above a cratered moon against a midnight blue sky.</desc>
+  <rect fill="#F6F0E4" height="640" id="background" rx="56" width="640" />
+  <rect fill="#14243D" height="592" id="sky" rx="40" width="592" x="24" y="24" />
+  <g fill="#F6E4B8" id="stars">
+    <path d="M438 78 L443 94 L459 99 L443 104 L438 120 L433 104 L417 99 L433 94 Z" id="stars.north" />
+    <path d="M105 237 L109 248 L120 252 L109 256 L105 267 L101 256 L90 252 L101 248 Z" id="stars.west" />
+    <path d="M535 238 L539 249 L550 253 L539 257 L535 268 L531 257 L520 253 L531 249 Z" id="stars.east" />
+    <circle cx="186" cy="99" id="stars.top-dot" r="4" />
+    <circle cx="543" cy="154" id="stars.right-dot" r="3" />
+    <circle cx="80" cy="379" id="stars.left-dot" r="4" />
+    <circle cx="224" cy="551" id="stars.bottom-dot" r="3" />
+  </g>
+  <path d="M107 450 C188 542 498 546 557 322" fill="none" id="orbit" stroke="#D2AA68" stroke-dasharray="3 13" stroke-linecap="round" stroke-width="3" />
+  <g id="moon">
+    <circle cx="454" cy="456" fill="#F6E4B8" id="moon.surface" r="142" />
+    <path d="M531 337 A142 142 0 0 1 351 553 C440 579 552 506 557 421 C559 388 547 358 531 337 Z" fill="#E1C991" id="moon.shade" />
+    <ellipse cx="421" cy="403" fill="#D9BF85" id="moon.crater-large" rx="34" ry="25" transform="rotate(-22 421 403)" />
+    <path d="M391 410 C398 390 424 381 444 391" fill="none" id="moon.crater-rim" stroke="#B79A61" stroke-linecap="round" stroke-width="5" />
+    <circle cx="497" cy="479" fill="#D9BF85" id="moon.crater-small" r="20" />
+    <circle cx="386" cy="498" fill="#D9BF85" id="moon.crater-tiny" r="12" />
+    <circle cx="492" cy="365" fill="#D9BF85" id="moon.speck" r="7" />
+  </g>
+  <g id="rocket" stroke="#14243D" stroke-linejoin="round" stroke-width="6" transform="translate(262 267) rotate(28)">
+    <path d="M-22 75 C-44 105 -32 138 0 165 C32 138 44 105 22 75 Z" fill="#EF8E59" id="rocket.flame" />
+    <path d="M-10 81 C-24 105 -14 127 0 142 C14 127 24 105 10 81 Z" fill="#F6E4B8" id="rocket.flame-core" stroke="none" />
+    <path d="M-42 -12 L-85 45 L-81 94 L-28 59 Z" fill="#EF7165" id="rocket.fin-left" />
+    <path d="M42 -12 L85 45 L81 94 L28 59 Z" fill="#EF7165" id="rocket.fin-right" />
+    <path d="M0 -132 C-47 -99 -61 -54 -46 42 L-25 82 L25 82 L46 42 C61 -54 47 -99 0 -132 Z" fill="#FFF1D4" id="rocket.body" />
+    <path d="M0 -132 C47 -99 61 -54 46 42 L25 82 L6 82 C39 18 41 -65 0 -132 Z" fill="#D6DDD0" id="rocket.body-shade" stroke="none" />
+    <path d="M0 -132 C-22 -116 -37 -93 -45 -68 Q0 -51 45 -68 C37 -93 22 -116 0 -132 Z" fill="#EF7165" id="rocket.nose" />
+    <circle cx="0" cy="-17" fill="#14243D" id="rocket.window-frame" r="28" stroke="none" />
+    <circle cx="0" cy="-17" fill="#9ED5D2" id="rocket.window" r="20" stroke="none" />
+    <circle cx="-6" cy="-23" fill="#F4FCED" id="rocket.window-glint" r="6" stroke="none" />
+    <path d="M-35 63 L35 63 L25 82 L-25 82 Z" fill="#14243D" id="rocket.collar" />
+    <path d="M0 27 L0 45" fill="none" id="rocket.seam" stroke-linecap="round" stroke-width="4" />
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+{
+  "width": 96,
+  "height": 96,
+  "rmse": 0.011209495697722421,
+  "rmse_by_background": {
+    "black": 0.011209495697722421,
+    "white": 0.011209495697722421
+  },
+  "alpha_rmse": 0.0,
+  "threshold": null,
+  "passed": true
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moon Flight · Image to SVG Test</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 32px; background: #eceff3; color: #14243d; font: 15px/1.6 system-ui, sans-serif; }
+    main { max-width: 1600px; margin: auto; }
+    h1 { margin: 0; font-size: 28px; }
+    h2 { margin: 24px 0 12px; font-size: 18px; }
+    p { margin: 8px 0 20px; }
+    a { color: #244f87; }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    figure { margin: 0; }
+    figcaption { margin-bottom: 8px; font-weight: 650; }
+    .large { display: block; width: 100%; height: auto; background: #fff; }
+    .sizes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .sample { display: flex; justify-content: center; padding: 24px; background: #fff; }
+    .dark { background: #101820; }
+    .sample img { display: block; width: 96px; height: 96px; }
+    details { margin-top: 24px; }
+    .native { overflow: auto; background: #fff; }
+    .native img { display: block; width: 768px; height: 768px; }
+    @media (max-width: 720px) {
+      body { padding: 20px; }
+      .comparison { gap: 12px; }
+      .sizes { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Moon Flight · Image → SVG</h1>
+    <p>왼쪽은 원본 PNG, 오른쪽은 PNG만 보고 재구성한 SVG의 렌더링입니다. 같은 768×768 캔버스이며 아래에서 축소 크기와 투명 모서리를 비교할 수 있습니다.</p>
+    <section class="comparison" aria-label="원본과 변환 결과 비교">
+      <figure><figcaption>원본 PNG</figcaption><img class="large" src="../preview.png" width="768" height="768" alt="원본 moon-flight 래스터 이미지"></figure>
+      <figure><figcaption>변환 SVG → PNG</figcaption><img class="large" src="preview.png" width="768" height="768" alt="새로 재구성한 SVG를 렌더링한 이미지"></figure>
+    </section>
+    <h2>96px · 밝은 배경 / 어두운 배경</h2>
+    <section class="sizes" aria-label="작은 크기와 투명도 비교">
+      <figure><figcaption>원본 · 밝게</figcaption><div class="sample"><img src="../preview-small.png" width="96" height="96" alt="원본 96픽셀 밝은 배경"></div></figure>
+      <figure><figcaption>변환 · 밝게</figcaption><div class="sample"><img src="preview-small.png" width="96" height="96" alt="변환 결과 96픽셀 밝은 배경"></div></figure>
+      <figure><figcaption>원본 · 어둡게</figcaption><div class="sample dark"><img src="../preview-small.png" width="96" height="96" alt="원본 96픽셀 어두운 배경"></div></figure>
+      <figure><figcaption>변환 · 어둡게</figcaption><div class="sample dark"><img src="preview-small.png" width="96" height="96" alt="변환 결과 96픽셀 어두운 배경"></div></figure>
+    </section>
+    <details>
+      <summary>변환 SVG를 원본 크기로 직접 보기</summary>
+      <div class="native"><img src="converted.svg" width="768" height="768" alt="768픽셀 크기의 편집 가능한 SVG"></div>
+    </details>
+    <p><a href="converted.svg">SVG 열기</a> · <a href="scene.json">편집용 장면 구조</a> · <a href="test-report.md">테스트 기록</a></p>
+  </main>
+</body>
+</html>

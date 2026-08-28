@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="768" viewBox="0 0 768 768" role="img" aria-labelledby="artwork.title artwork.description">
+  <title id="artwork.title">Moon flight — raster reconstruction</title>
+  <desc id="artwork.description">A coral and cream rocket flies above a golden cratered moon, surrounded by stars and a dotted flight trail on a navy rounded panel.</desc>
+  <rect id="frame" width="768" height="768" rx="67.2" fill="#f6f0e4"/>
+  <rect id="sky" x="28.8" y="28.8" width="710.4" height="710.4" rx="48" fill="#14243d"/>
+  <g id="stars" fill="#f6e4b8">
+    <path id="stars.top" d="M525.6 93.6 531.6 112.8 550.8 118.8 531.6 124.8 525.6 144 519.6 124.8 500.4 118.8 519.6 112.8Z"/>
+    <path id="stars.left" d="M126 284.4 130.8 297.6 144 302.4 130.8 307.2 126 320.4 121.2 307.2 108 302.4 121.2 297.6Z"/>
+    <path id="stars.right" d="M642 285.6 646.8 298.8 660 303.6 646.8 308.4 642 321.6 637.2 308.4 624 303.6 637.2 298.8Z"/>
+    <circle id="stars.upper-dot" cx="223.2" cy="118.8" r="4.8"/>
+    <circle id="stars.right-dot" cx="651.6" cy="184.8" r="3.6"/>
+    <circle id="stars.left-dot" cx="96" cy="454.8" r="4.8"/>
+    <circle id="stars.lower-dot" cx="268.8" cy="661.2" r="3.6"/>
+  </g>
+  <g id="flight-trail" fill="none" stroke="#d2aa68" stroke-width="3.6" stroke-linecap="round">
+    <path id="flight-trail.lower" d="M128.4 540C229.2 638.4 451.2 633.6 589.2 541.2" stroke-dasharray="3.6 15.6"/>
+    <path id="flight-trail.upper" d="M668.4 388.8 667.2 392.4M662.4 406.8 661.2 410.4"/>
+  </g>
+  <g id="moon">
+    <circle id="moon.body" cx="544.8" cy="547.2" r="170.4" fill="#f6e4b8"/>
+    <path id="moon.shadow" d="M642 408C679 470 678 528 635 584C584 651 499 690 421 664C478 696 548 696 608 658C688 607 703 506 642 408Z" fill="#e1c991"/>
+    <ellipse id="moon.large-crater" cx="505.2" cy="483.6" rx="40.8" ry="30" transform="rotate(-24 505.2 483.6)" fill="#d9bf85"/>
+    <path id="moon.crater-rim" d="M469.2 492C478.8 465.6 506.4 457.2 532.8 469.2" fill="none" stroke="#b79a61" stroke-width="6" stroke-linecap="round"/>
+    <circle id="moon.upper-crater" cx="590.4" cy="438" r="8.4" fill="#d9bf85"/>
+    <circle id="moon.right-crater" cx="596.4" cy="574.8" r="24" fill="#d9bf85"/>
+    <circle id="moon.lower-crater" cx="463.2" cy="597.6" r="14.4" fill="#d9bf85"/>
+  </g>
+  <g id="rocket">
+    <g id="rocket.flame">
+      <path id="rocket.flame.outer" d="M240 397.2C212.4 415.2 208.8 450 223.2 490.8C265.2 478.8 290.4 458.4 292.8 424.8Z" fill="#ef8e59"/>
+      <path id="rocket.flame.inner" d="M254.4 404.4C232.8 418.8 226.8 446.4 234 471.6C258 462 274.8 445.2 279.6 418.8Z" fill="#f6e4b8"/>
+    </g>
+    <path id="rocket.left-fin" d="M253.2 298.8 201.6 322.8 181.2 370.8 238.8 364.8 238.8 338.4Z" fill="#ef7165"/>
+    <path id="rocket.right-fin" d="M366 358.8 375.6 415.2 348 459.6 319.2 406.8 340.8 391.2Z" fill="#ef7165"/>
+    <path id="rocket.body" d="M304.8 223.2C277.2 253.2 255.6 298.8 242.4 339.6L242.4 366 320.4 406.8 340.8 392.4C369.6 354 390 315.6 402 274.8C367.2 270 332.4 251.2 304.8 223.2Z" fill="#fff1d4" stroke="#14243d" stroke-width="6" stroke-linejoin="round"/>
+    <path id="rocket.body-shadow" d="M376.8 274.8C358.8 325.2 331.2 367.2 297.6 393.6L320.4 403.2 338.4 390C366 354 387.6 315.6 399.6 277.2Z" fill="#d6ddd0"/>
+    <path id="rocket.nose" d="M386.4 184.8C358.8 189.6 333.6 202.8 310.8 223.2C333.6 246 363.6 264 397.2 270C403.2 241.2 398.4 210 386.4 184.8Z" fill="#ef7165"/>
+    <circle id="rocket.window-frame" cx="324" cy="302.4" r="33.6" fill="#14243d"/>
+    <circle id="rocket.window" cx="324" cy="302.4" r="24" fill="#9ed5d2"/>
+    <circle id="rocket.window-glint" cx="321.6" cy="292.8" r="7.2" fill="#f4fced"/>
+    <path id="rocket.hull-mark" d="M298.8 349.2 289.2 368.4" fill="none" stroke="#14243d" stroke-width="4.8" stroke-linecap="round"/>
+  </g>
+</svg>

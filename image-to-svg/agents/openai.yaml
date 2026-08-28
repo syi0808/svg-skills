@@ -1,0 +1,3 @@
+interface:
+  display_name: "Image to SVG"
+  short_description: "Convert raster images into editable, reviewed SVGs"
