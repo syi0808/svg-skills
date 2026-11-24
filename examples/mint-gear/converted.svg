@@ -1,7 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="470" height="474" viewBox="0 0 470 474" role="img" aria-labelledby="gear-title gear-description">
   <title id="gear-title">Mint green gear</title>
-  <desc id="gear-description">A softly rounded mint green gear with eight shaded teeth and a lime green center.</desc>
+  <desc id="gear-description">A softly rounded mint green gear with eight shaded teeth and a lime green center, floating above a soft shadow.</desc>
   <defs>
+    <radialGradient id="ground-ambient">
+      <stop stop-color="#252b1e" stop-opacity=".224"/>
+      <stop offset=".34" stop-color="#252b1e" stop-opacity=".2"/>
+      <stop offset=".65" stop-color="#252b1e" stop-opacity=".117"/>
+      <stop offset=".84" stop-color="#252b1e" stop-opacity=".048"/>
+      <stop offset="1" stop-color="#252b1e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ground-contact">
+      <stop stop-color="#1c241b" stop-opacity=".218"/>
+      <stop offset=".35" stop-color="#1c241b" stop-opacity=".176"/>
+      <stop offset=".6" stop-color="#1c241b" stop-opacity=".102"/>
+      <stop offset=".84" stop-color="#1c241b" stop-opacity=".036"/>
+      <stop offset="1" stop-color="#1c241b" stop-opacity="0"/>
+    </radialGradient>
     <path id="gear-outline" d="M 231 31.6
       C 248 31.8 262 30.2 272 40
       C 287 54 279.3 73.3 287.5 85.1
@@ -249,6 +263,11 @@
       <circle cx="228.8" cy="229.5" r="44.8" fill="url(#hub-alpha)"/>
     </mask>
   </defs>
+  <g id="ground-shadow">
+    <ellipse id="shadow-ambient" cx="281" cy="434" rx="186" ry="35" fill="url(#ground-ambient)"/>
+    <ellipse id="shadow-left-spread" cx="171" cy="438" rx="121" ry="25" fill="url(#ground-ambient)" opacity=".25"/>
+    <ellipse id="shadow-contact" cx="263" cy="446" rx="121" ry="18" fill="url(#ground-contact)"/>
+  </g>
   <g id="gear-body" mask="url(#soft-silhouette)">
     <rect id="body-color" width="470" height="474" fill="url(#mint-face)"/>
     <g id="tooth-shading">
