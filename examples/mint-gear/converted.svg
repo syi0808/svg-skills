@@ -42,6 +42,18 @@
     <clipPath id="gear-clip">
       <use href="#gear-outline"/>
     </clipPath>
+    <g id="outline-feather" fill="none">
+      <use href="#gear-outline" stroke-width="1.95" stroke-opacity=".065"/>
+      <use href="#gear-outline" stroke-width="1.72" stroke-opacity=".12"/>
+      <use href="#gear-outline" stroke-width="1.27" stroke-opacity=".166"/>
+      <use href="#gear-outline" stroke-width=".8" stroke-opacity=".2"/>
+      <use href="#gear-outline" stroke-width=".42" stroke-opacity=".089"/>
+    </g>
+    <mask id="soft-silhouette" maskUnits="userSpaceOnUse" x="0" y="0" width="470" height="474">
+      <use href="#outline-feather" stroke="#fff"/>
+      <use href="#gear-outline" fill="#fff"/>
+      <use href="#outline-feather" stroke="#000" clip-path="url(#gear-clip)"/>
+    </mask>
     <linearGradient id="mint-face" gradientUnits="userSpaceOnUse" x1="128" y1="59" x2="298" y2="392">
       <stop stop-color="#b0e2b8"/>
       <stop offset=".45" stop-color="#addfb5"/>
@@ -63,18 +75,18 @@
       <stop offset="1" stop-color="#6ca17f" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="mint-reflected-sheen">
-      <stop stop-color="#ceefd7" stop-opacity=".86"/>
-      <stop offset=".43" stop-color="#c1e8cf" stop-opacity=".62"/>
-      <stop offset=".74" stop-color="#c7e7d0" stop-opacity=".22"/>
+      <stop stop-color="#c5e9cf" stop-opacity=".73"/>
+      <stop offset=".43" stop-color="#c1e8cf" stop-opacity=".53"/>
+      <stop offset=".74" stop-color="#c7e7d0" stop-opacity=".20"/>
       <stop offset="1" stop-color="#c9ead2" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="mint-specular">
-      <stop stop-color="#f6fff5"/>
-      <stop offset=".25" stop-color="#f1fff1" stop-opacity=".93"/>
-      <stop offset=".45" stop-color="#e9ffec" stop-opacity=".68"/>
-      <stop offset=".62" stop-color="#e2ffe6" stop-opacity=".38"/>
-      <stop offset=".8" stop-color="#ddfce3" stop-opacity=".14"/>
-      <stop offset="1" stop-color="#d9fae2" stop-opacity="0"/>
+      <stop stop-color="#dbf8df" stop-opacity=".45"/>
+      <stop offset=".28" stop-color="#d5f7dc" stop-opacity=".41"/>
+      <stop offset=".5" stop-color="#d1f6d9" stop-opacity=".32"/>
+      <stop offset=".72" stop-color="#cdf5d6" stop-opacity=".17"/>
+      <stop offset=".9" stop-color="#c9f3d3" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#c9f3d3" stop-opacity="0"/>
     </radialGradient>
     <mask id="rounded-tooth-falloff" maskUnits="userSpaceOnUse" x="0" y="0" width="470" height="474">
       <g fill="none" stroke="#fff" stroke-linejoin="round">
@@ -237,7 +249,7 @@
       <circle cx="228.8" cy="229.5" r="44.8" fill="url(#hub-alpha)"/>
     </mask>
   </defs>
-  <g id="gear-body" clip-path="url(#gear-clip)">
+  <g id="gear-body" mask="url(#soft-silhouette)">
     <rect id="body-color" width="470" height="474" fill="url(#mint-face)"/>
     <g id="tooth-shading">
       <use id="tooth-ambient-shading" href="#tooth-shadow-fields" fill="url(#mint-edge-shade)" opacity=".83"/>
@@ -257,14 +269,14 @@
       <ellipse id="east-sheen" cx="418" cy="189" rx="44" ry="27" opacity=".49"/>
     </g>
     <g id="tooth-specular-reflections" fill="url(#mint-specular)">
-      <ellipse id="north-glint" cx="218" cy="45" rx="24" ry="10" transform="rotate(-23 218 45)" opacity=".97"/>
-      <ellipse id="northwest-glint" cx="102" cy="92" rx="24" ry="9.5" transform="rotate(-43 102 92)" opacity=".94"/>
-      <ellipse id="northeast-glint" cx="339" cy="89" rx="22" ry="8.5" transform="rotate(-29 339 89)" opacity=".76"/>
-      <ellipse id="west-glint" cx="49" cy="198" rx="23" ry="9.5" transform="rotate(-44 49 198)" opacity=".91"/>
-      <ellipse id="east-glint" cx="409" cy="204" rx="20" ry="7.5" transform="rotate(16 409 204)" opacity=".63"/>
-      <ellipse id="southwest-glint" cx="78" cy="326" rx="23" ry="9" transform="rotate(-62 78 326)" opacity=".81"/>
-      <ellipse id="southeast-glint" cx="368" cy="333" rx="19" ry="7.5" transform="rotate(53 368 333)" opacity=".35"/>
-      <ellipse id="south-glint" cx="191" cy="394" rx="20" ry="8" transform="rotate(72 191 394)" opacity=".51"/>
+      <ellipse id="north-glint" cx="218" cy="45" rx="32" ry="21" transform="rotate(-23 218 45)" opacity=".95"/>
+      <ellipse id="northwest-glint" cx="102" cy="92" rx="33" ry="20" transform="rotate(-43 102 92)" opacity=".93"/>
+      <ellipse id="northeast-glint" cx="339" cy="89" rx="30" ry="18" transform="rotate(-29 339 89)" opacity=".76"/>
+      <ellipse id="west-glint" cx="49" cy="198" rx="33" ry="22" transform="rotate(-44 49 198)" opacity=".9"/>
+      <ellipse id="east-glint" cx="409" cy="204" rx="27" ry="16" transform="rotate(16 409 204)" opacity=".43"/>
+      <ellipse id="southwest-glint" cx="78" cy="326" rx="32" ry="20" transform="rotate(-62 78 326)" opacity=".78"/>
+      <ellipse id="southeast-glint" cx="368" cy="333" rx="26" ry="15" transform="rotate(53 368 333)" opacity=".3"/>
+      <ellipse id="south-glint" cx="191" cy="394" rx="27" ry="17" transform="rotate(72 191 394)" opacity=".48"/>
     </g>
     <circle id="socket-highlight" cx="238" cy="237" r="105" fill="url(#socket-light)"/>
     <circle id="socket-occlusion" cx="220" cy="221.4" r="104" fill="url(#socket-shadow)"/>
