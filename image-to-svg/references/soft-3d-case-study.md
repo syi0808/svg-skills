@@ -63,3 +63,47 @@ right, measured before the ground shadow was restored. Those are observations
 for this render, not a default target: the feather scales with the SVG, and
 pixel counts vary with output size, renderer, and where the contour crosses the
 pixel grid.
+
+## Follow-up: Recoloring and local refinements
+
+The follow-up produced a sky-blue body with a lavender center
+(`examples/mint-gear/sky-blue.svg` in the repository checkout). The reference
+still governed shape, lighting direction, and depth; the palette was the
+intentional departure.
+
+### Recolor the whole material ramp
+
+Changing only the base fill would leave mint-colored flanks and reflections on
+the blue body. Recolor its midtones, rolled shadows, highlights, and recess as a
+set, preserving their relative contrast. Keep gradient positions, stop offsets,
+and opacities fixed for the first render so a color change does not also change
+the lighting geometry. When the center then changed from lime to lavender,
+only its color stops needed replacing. The blue recess belongs to the body;
+the silhouette, transparency, and ground shadow stayed untouched.
+
+### Feather the join without merging the forms
+
+When the user asked for a more connected center, widening the button's mask
+and lowering the surrounding contrast made the button and ring read as one
+surface. That lost a depth cue the reference clearly had. Restore the
+last faithful shape and shading, then soften just the button's outer edge with
+a short radial opacity ramp. In this case the over-blended ramp was about
+14 viewBox units wide; the correction used about 3.4 at the same scale, leaving
+the visible button and the ring's highlight and shadow intact. Check the color
+transition across an internal join, not the rendered alpha: the ring behind
+the button keeps those pixels opaque.
+
+### Review concave valleys separately from tooth tips
+
+Reviewing the tips alone missed pale light between the top and upper-left
+teeth and between the upper-left and left teeth. Shift and rotate existing local
+gradient fields toward the lit flanks of those valleys, then taper their opacity
+into the body. Avoid adding a hard light-colored stroke or repeating a bright
+spot in every valley. When the palette differs from the source, compare where
+the light sits and how it falls off relative to neighboring midtones, not exact
+RGB values or background-mixed edge pixels.
+
+For these local edits, compare the result to both the source and the last
+accepted render. An SVG diff confirms which controls changed; a pixel diff
+rendered at the same size with the same renderer can confirm that pixels
+outside the intended region and the alpha channel did not change.

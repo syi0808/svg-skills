@@ -48,8 +48,8 @@ result. Preserve the original and write conversion outputs separately.
 Read [conversion-modes.md](references/conversion-modes.md) for tracing, lettering,
 photographic sources, and low-resolution edge treatment when relevant.
 For softly shaded 3D-style icons, read the
-[Soft 3D case study](references/soft-3d-case-study.md) before tuning highlights,
-edge softness, or transparent shadows.
+[Soft 3D case study](references/soft-3d-case-study.md) for palette changes,
+local joins, highlights, edge softness, and transparent shadows.
 Do not install heavyweight tracing stacks or upload the source to a conversion
 service by default. A task to convert an image does not require generating a new
 bitmap. If the input is already SVG, inspect and edit that source instead of
