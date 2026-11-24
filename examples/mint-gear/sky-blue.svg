@@ -228,39 +228,43 @@
       <circle cx="228.6" cy="229" r="81.5" fill="url(#ring-alpha)"/>
     </mask>
     <radialGradient id="hub-light" gradientUnits="userSpaceOnUse" cx="233.8" cy="234.8" r="59">
-      <stop offset=".61" stop-color="#e7d8fc" stop-opacity=".93"/>
-      <stop offset=".72" stop-color="#e4d4fa" stop-opacity=".84"/>
-      <stop offset=".83" stop-color="#dfcdf7" stop-opacity=".46"/>
-      <stop offset=".93" stop-color="#dac6f5" stop-opacity=".14"/>
+      <stop offset=".61" stop-color="#e4d4fa" stop-opacity=".74"/>
+      <stop offset=".72" stop-color="#e1d0f8" stop-opacity=".62"/>
+      <stop offset=".83" stop-color="#dccaf5" stop-opacity=".34"/>
+      <stop offset=".93" stop-color="#dac6f5" stop-opacity=".10"/>
       <stop offset="1" stop-color="#d6c1f3" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="hub-shadow" gradientUnits="userSpaceOnUse" cx="224" cy="224.2" r="55.8">
-      <stop offset=".66" stop-color="#7358a8" stop-opacity=".86"/>
-      <stop offset=".75" stop-color="#8065b4" stop-opacity=".86"/>
-      <stop offset=".82" stop-color="#896fba" stop-opacity=".52"/>
-      <stop offset=".9" stop-color="#947ac2" stop-opacity=".24"/>
-      <stop offset="1" stop-color="#9a83ca" stop-opacity="0"/>
+    <radialGradient id="hub-shadow" gradientUnits="userSpaceOnUse" cx="225.5" cy="225.3" r="57.5">
+      <stop offset=".64" stop-color="#8468b7" stop-opacity=".58"/>
+      <stop offset=".74" stop-color="#8b70bc" stop-opacity=".53"/>
+      <stop offset=".82" stop-color="#957bc3" stop-opacity=".39"/>
+      <stop offset=".91" stop-color="#a48bd0" stop-opacity=".15"/>
+      <stop offset="1" stop-color="#ac94d6" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="hub-dome" gradientUnits="userSpaceOnUse" cx="208" cy="209" r="68">
       <stop stop-color="#e1cffb"/>
       <stop offset=".22" stop-color="#dcc8f7"/>
       <stop offset=".47" stop-color="#cfb9ef"/>
       <stop offset=".68" stop-color="#c3aae7"/>
-      <stop offset=".86" stop-color="#b093db"/>
-      <stop offset="1" stop-color="#8065b5"/>
+      <stop offset=".86" stop-color="#b79de0"/>
+      <stop offset="1" stop-color="#a88bd3"/>
     </radialGradient>
-    <radialGradient id="hub-rim" gradientUnits="userSpaceOnUse" cx="228.5" cy="229.2" r="45">
-      <stop offset=".88" stop-color="#967bc6" stop-opacity="0"/>
-      <stop offset="1" stop-color="#8669b8" stop-opacity=".16"/>
+    <radialGradient id="hub-rim" gradientUnits="userSpaceOnUse" cx="228.8" cy="229.5" r="50.5">
+      <stop offset=".73" stop-color="#a38bce" stop-opacity="0"/>
+      <stop offset=".90" stop-color="#a38bce" stop-opacity=".065"/>
+      <stop offset="1" stop-color="#a38bce" stop-opacity=".065"/>
     </radialGradient>
     <radialGradient id="hub-alpha">
-      <stop offset=".958" stop-color="#fff"/>
-      <stop offset=".979" stop-color="#fff" stop-opacity=".76"/>
-      <stop offset=".993" stop-color="#fff" stop-opacity=".28"/>
+      <stop offset=".73" stop-color="#fff"/>
+      <stop offset=".78" stop-color="#fff" stop-opacity=".92"/>
+      <stop offset=".83" stop-color="#fff" stop-opacity=".69"/>
+      <stop offset=".875" stop-color="#fff" stop-opacity=".43"/>
+      <stop offset=".92" stop-color="#fff" stop-opacity=".19"/>
+      <stop offset=".97" stop-color="#fff" stop-opacity=".035"/>
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </radialGradient>
-    <mask id="hub-silhouette" maskUnits="userSpaceOnUse" x="182" y="183" width="93" height="93">
-      <circle cx="228.8" cy="229.5" r="44.8" fill="url(#hub-alpha)"/>
+    <mask id="hub-silhouette" maskUnits="userSpaceOnUse" x="177" y="178" width="104" height="104">
+      <circle cx="228.8" cy="229.5" r="50.5" fill="url(#hub-alpha)"/>
     </mask>
   </defs>
   <g id="ground-shadow">
@@ -307,10 +311,10 @@
     <circle id="ring-shoulder" cx="228.6" cy="229" r="82" fill="url(#lavender-shoulder)"/>
     <circle id="ring-outer-edge" cx="228.6" cy="229" r="82" fill="url(#lavender-rim)"/>
     <circle id="ring-inner-highlight" cx="233.8" cy="234.8" r="59" fill="url(#hub-light)"/>
-    <circle id="ring-inner-shadow" cx="224" cy="224.2" r="55.8" fill="url(#hub-shadow)"/>
+    <circle id="ring-inner-shadow" cx="225.5" cy="225.3" r="57.5" fill="url(#hub-shadow)"/>
   </g>
   <g id="center-hub" mask="url(#hub-silhouette)">
-    <circle id="hub-face" cx="228.8" cy="229.5" r="45.3" fill="url(#hub-dome)"/>
-    <circle id="hub-edge" cx="228.8" cy="229.5" r="45.3" fill="url(#hub-rim)"/>
+    <circle id="hub-face" cx="228.8" cy="229.5" r="50.5" fill="url(#hub-dome)"/>
+    <circle id="hub-edge" cx="228.8" cy="229.5" r="50.5" fill="url(#hub-rim)"/>
   </g>
 </svg>
