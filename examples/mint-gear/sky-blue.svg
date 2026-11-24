@@ -279,10 +279,10 @@
     <g id="tooth-highlights" fill="url(#sky-edge-sheen)" opacity=".88">
       <ellipse id="north-sheen" cx="210" cy="38" rx="51" ry="48" opacity=".94"/>
       <ellipse id="northwest-sheen" cx="95" cy="91" rx="56" ry="43" transform="rotate(-31 95 91)" opacity=".94"/>
-      <ellipse id="upper-left-notch-sheen" cx="176" cy="85" rx="46" ry="34" opacity=".74"/>
+      <ellipse id="upper-left-notch-sheen" cx="185" cy="84" rx="42" ry="29" transform="rotate(-21 185 84)" opacity=".96"/>
       <ellipse id="upper-right-notch-sheen" cx="323" cy="87" rx="49" ry="31" transform="rotate(-14 323 87)" opacity=".92"/>
       <ellipse id="west-sheen" cx="49" cy="185" rx="78" ry="46" transform="rotate(-15 49 185)" opacity=".91"/>
-      <ellipse id="left-notch-sheen" cx="82" cy="166" rx="42" ry="44" opacity=".45"/>
+      <ellipse id="left-notch-sheen" cx="91" cy="160" rx="35" ry="40" transform="rotate(-15 91 160)" opacity=".79"/>
       <ellipse id="west-edge-sheen" cx="25" cy="221" rx="34" ry="41" opacity=".47"/>
       <ellipse id="southwest-sheen" cx="64" cy="313" rx="63" ry="54" transform="rotate(12 64 313)" opacity=".92"/>
       <ellipse id="lower-left-notch-sheen" cx="172" cy="388" rx="28" ry="40" transform="rotate(-14 172 388)" opacity=".57"/>
