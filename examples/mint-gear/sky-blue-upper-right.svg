@@ -1,0 +1,420 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="474" viewBox="0 0 470 474" role="img" aria-labelledby="gear-title gear-description">
+  <title id="gear-title">Sky blue gear — upper-right light</title>
+  <desc id="gear-description">A sky blue gear with a lavender center lit from the upper right, casting a soft shadow to the left.</desc>
+  <defs>
+    <radialGradient id="ground-ambient">
+      <stop stop-color="#252b1e" stop-opacity=".224"/>
+      <stop offset=".34" stop-color="#252b1e" stop-opacity=".2"/>
+      <stop offset=".65" stop-color="#252b1e" stop-opacity=".117"/>
+      <stop offset=".84" stop-color="#252b1e" stop-opacity=".048"/>
+      <stop offset="1" stop-color="#252b1e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ground-contact">
+      <stop stop-color="#1c241b" stop-opacity=".218"/>
+      <stop offset=".35" stop-color="#1c241b" stop-opacity=".176"/>
+      <stop offset=".6" stop-color="#1c241b" stop-opacity=".102"/>
+      <stop offset=".84" stop-color="#1c241b" stop-opacity=".036"/>
+      <stop offset="1" stop-color="#1c241b" stop-opacity="0"/>
+    </radialGradient>
+    <path id="gear-outline" d="M 231 31.6
+      C 248 31.8 262 30.2 272 40
+      C 287 54 279.3 73.3 287.5 85.1
+      C 295.6 96 313.4 93.6 326.3 83.1
+      C 337.1 74.4 343.5 70.6 354 74.8
+      C 369.7 80.2 384.3 96.9 392.7 115.3
+      C 401.6 130.8 394.9 137.1 383.3 149.4
+      C 371.3 161.6 368.9 179.7 384 186.9
+      C 397.1 191.5 413 188.9 423.3 199.2
+      C 434 207.1 434.1 219.9 432.8 236.3
+      C 431.7 255.2 430.7 270.5 414 277.1
+      C 402.7 282.9 381.2 276.9 373.6 288.6
+      C 363.2 302 372 316.3 380.4 327.4
+      C 392 341.5 390.4 353.1 374.8 369.2
+      C 359.8 385.2 343.4 398.9 327.7 391
+      C 312.2 384.5 302.9 368.9 285.9 373
+      C 270.7 374.8 271.2 387.2 267 402.9
+      C 263.3 419.6 251.2 429.2 234.1 428.1
+      C 219.9 427.4 202.8 428.5 192.4 420.5
+      C 176.6 410.5 180.5 394 176 383.9
+      C 171.1 372.2 162.9 363 150.2 368.5
+      C 137.3 372.8 126.2 385.6 110.7 384.5
+      C 94.2 384 79.8 368 70.4 355.8
+      C 61.4 343.8 60 330.5 69.1 317.9
+      C 77.4 306.6 90.6 296.6 83.5 282.9
+      C 77.9 268.3 65.1 270.8 50.5 266.6
+      C 33.9 262.3 28 247.6 29.5 233.8
+      C 29.9 223.9 28 212.7 31.1 200.9
+      C 35.3 184.2 51 179.6 65.6 179.2
+      C 82.1 178.7 93.4 170.6 91 155.6
+      C 89.4 143.5 74.5 135.8 73.3 121.7
+      C 70.4 108.5 83.4 96.8 92.5 85.4
+      C 103.1 75.1 117.1 66.3 130 69.5
+      C 144.7 71.3 150.5 87.4 165.8 88.4
+      C 183.6 89.7 192.2 80 193.6 62.1
+      C 195.2 43.8 202.8 32.2 221.1 32.1
+      C 224.7 31.8 228 31.6 231 31.6 Z"/>
+    <clipPath id="gear-clip">
+      <use href="#gear-outline"/>
+    </clipPath>
+    <g id="outline-feather" fill="none">
+      <use href="#gear-outline" stroke-width="1.95" stroke-opacity=".065"/>
+      <use href="#gear-outline" stroke-width="1.72" stroke-opacity=".12"/>
+      <use href="#gear-outline" stroke-width="1.27" stroke-opacity=".166"/>
+      <use href="#gear-outline" stroke-width=".8" stroke-opacity=".2"/>
+      <use href="#gear-outline" stroke-width=".42" stroke-opacity=".089"/>
+    </g>
+    <mask id="soft-silhouette" maskUnits="userSpaceOnUse" x="0" y="0" width="470" height="474">
+      <use href="#outline-feather" stroke="#fff"/>
+      <use href="#gear-outline" fill="#fff"/>
+      <use href="#outline-feather" stroke="#000" clip-path="url(#gear-clip)"/>
+    </mask>
+    <linearGradient id="sky-face" gradientUnits="userSpaceOnUse" x1="128" y1="59" x2="298" y2="392" gradientTransform="rotate(90 230 229)">
+      <stop stop-color="#a6d8f4"/>
+      <stop offset=".45" stop-color="#a1d4f1"/>
+      <stop offset="1" stop-color="#9accef"/>
+    </linearGradient>
+    <radialGradient id="sky-edge-shade">
+      <stop stop-color="#639abf"/>
+      <stop offset=".24" stop-color="#679ec1" stop-opacity=".94"/>
+      <stop offset=".46" stop-color="#6da3c5" stop-opacity=".74"/>
+      <stop offset=".66" stop-color="#74a9cb" stop-opacity=".42"/>
+      <stop offset=".84" stop-color="#7db0d0" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#86b6d7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sky-rollover">
+      <stop stop-color="#386489"/>
+      <stop offset=".38" stop-color="#437298" stop-opacity=".87"/>
+      <stop offset=".64" stop-color="#4e7da1" stop-opacity=".55"/>
+      <stop offset=".84" stop-color="#5b89ac" stop-opacity=".20"/>
+      <stop offset="1" stop-color="#6695b7" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="rounded-tooth-falloff" maskUnits="userSpaceOnUse" x="0" y="0" width="470" height="474">
+      <g fill="none" stroke="#fff" stroke-linejoin="round">
+        <use href="#gear-outline" stroke-width="66" stroke-opacity=".004"/>
+        <use href="#gear-outline" stroke-width="64" stroke-opacity=".006"/>
+        <use href="#gear-outline" stroke-width="62" stroke-opacity=".008"/>
+        <use href="#gear-outline" stroke-width="60" stroke-opacity=".012"/>
+        <use href="#gear-outline" stroke-width="58" stroke-opacity=".015"/>
+        <use href="#gear-outline" stroke-width="56" stroke-opacity=".018"/>
+        <use href="#gear-outline" stroke-width="54" stroke-opacity=".020"/>
+        <use href="#gear-outline" stroke-width="52" stroke-opacity=".021"/>
+        <use href="#gear-outline" stroke-width="50" stroke-opacity=".019"/>
+        <use href="#gear-outline" stroke-width="48" stroke-opacity=".020"/>
+        <use href="#gear-outline" stroke-width="46" stroke-opacity=".023"/>
+        <use href="#gear-outline" stroke-width="44" stroke-opacity=".025"/>
+        <use href="#gear-outline" stroke-width="42" stroke-opacity=".028"/>
+        <use href="#gear-outline" stroke-width="40" stroke-opacity=".031"/>
+        <use href="#gear-outline" stroke-width="38" stroke-opacity=".033"/>
+        <use href="#gear-outline" stroke-width="36" stroke-opacity=".036"/>
+        <use href="#gear-outline" stroke-width="34" stroke-opacity=".039"/>
+        <use href="#gear-outline" stroke-width="32" stroke-opacity=".042"/>
+        <use href="#gear-outline" stroke-width="30" stroke-opacity=".044"/>
+        <use href="#gear-outline" stroke-width="28" stroke-opacity=".046"/>
+        <use href="#gear-outline" stroke-width="26" stroke-opacity=".048"/>
+        <use href="#gear-outline" stroke-width="24" stroke-opacity=".049"/>
+        <use href="#gear-outline" stroke-width="22" stroke-opacity=".050"/>
+        <use href="#gear-outline" stroke-width="20" stroke-opacity=".050"/>
+        <use href="#gear-outline" stroke-width="18" stroke-opacity=".049"/>
+        <use href="#gear-outline" stroke-width="16" stroke-opacity=".047"/>
+        <use href="#gear-outline" stroke-width="14" stroke-opacity=".044"/>
+        <use href="#gear-outline" stroke-width="12" stroke-opacity=".040"/>
+        <use href="#gear-outline" stroke-width="10" stroke-opacity=".035"/>
+        <use href="#gear-outline" stroke-width="8" stroke-opacity=".029"/>
+        <use href="#gear-outline" stroke-width="6" stroke-opacity=".022"/>
+        <use href="#gear-outline" stroke-width="4" stroke-opacity=".014"/>
+        <use href="#gear-outline" stroke-width="2" stroke-opacity=".007"/>
+      </g>
+    </mask>
+    <radialGradient id="sky-edge-sheen">
+      <stop stop-color="#c9edfe"/>
+      <stop offset=".34" stop-color="#c5ebfd" stop-opacity=".86"/>
+      <stop offset=".6" stop-color="#c0e9fc" stop-opacity=".48"/>
+      <stop offset=".83" stop-color="#bce7fc" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#b8e4fb" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="socket-light" gradientUnits="userSpaceOnUse" cx="220.600" cy="238.400" r="105">
+      <stop offset=".73" stop-color="#c4eef6" stop-opacity=".7"/>
+      <stop offset=".84" stop-color="#bfeaf5" stop-opacity=".66"/>
+      <stop offset=".9" stop-color="#b9e7f4" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#b7e5f4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="socket-shadow" gradientUnits="userSpaceOnUse" cx="236.200" cy="220.400" r="104">
+      <stop offset=".65" stop-color="#355d6d" stop-opacity=".94"/>
+      <stop offset=".72" stop-color="#3c6b7c" stop-opacity=".86"/>
+      <stop offset=".77" stop-color="#467889" stop-opacity=".73"/>
+      <stop offset=".82" stop-color="#558aa0" stop-opacity=".48"/>
+      <stop offset=".89" stop-color="#649ab2" stop-opacity=".19"/>
+      <stop offset="1" stop-color="#75aac2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="socket-seam">
+      <stop offset=".885" stop-color="#365d6b" stop-opacity=".92"/>
+      <stop offset=".93" stop-color="#3c6978" stop-opacity=".83"/>
+      <stop offset=".962" stop-color="#4b8395" stop-opacity=".44"/>
+      <stop offset="1" stop-color="#77b2c9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lavender-face" gradientUnits="userSpaceOnUse" x1="176" y1="164" x2="284" y2="297" gradientTransform="rotate(90 228.6 229)">
+      <stop stop-color="#d9c8f5"/>
+      <stop offset=".5" stop-color="#cdb7ee"/>
+      <stop offset="1" stop-color="#c9b0ec"/>
+    </linearGradient>
+    <radialGradient id="lavender-sheen" gradientUnits="userSpaceOnUse" cx="178" cy="178" r="58" gradientTransform="rotate(90 228.6 229)">
+      <stop stop-color="#e9dafa" stop-opacity=".65"/>
+      <stop offset=".5" stop-color="#e4d3f8" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#e0cdf7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lavender-shoulder" gradientUnits="userSpaceOnUse" cx="219" cy="221" r="92" gradientTransform="rotate(90 228.6 229)">
+      <stop offset=".66" stop-color="#a189d2" stop-opacity="0"/>
+      <stop offset=".76" stop-color="#a189d2" stop-opacity=".13"/>
+      <stop offset=".84" stop-color="#977dc9" stop-opacity=".43"/>
+      <stop offset=".91" stop-color="#886dbd" stop-opacity=".67"/>
+      <stop offset=".97" stop-color="#7c60b1" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#7054a3" stop-opacity=".86"/>
+    </radialGradient>
+    <radialGradient id="lavender-rim" gradientUnits="userSpaceOnUse" cx="228.6" cy="229" r="81">
+      <stop offset=".88" stop-color="#8066b3" stop-opacity="0"/>
+      <stop offset=".93" stop-color="#755daa" stop-opacity=".10"/>
+      <stop offset=".97" stop-color="#6a529c" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#5d478c" stop-opacity=".74"/>
+    </radialGradient>
+    <radialGradient id="ring-alpha">
+      <stop offset=".980" stop-color="#fff"/>
+      <stop offset=".990" stop-color="#fff" stop-opacity=".8"/>
+      <stop offset=".996" stop-color="#fff" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="ring-silhouette" maskUnits="userSpaceOnUse" x="145" y="145" width="167" height="168">
+      <circle cx="228.6" cy="229" r="81.5" fill="url(#ring-alpha)"/>
+    </mask>
+    <radialGradient id="hub-light" gradientUnits="userSpaceOnUse" cx="223.500" cy="234.500" r="59">
+      <stop offset=".61" stop-color="#e7d8fc" stop-opacity=".93"/>
+      <stop offset=".72" stop-color="#e4d4fa" stop-opacity=".84"/>
+      <stop offset=".83" stop-color="#dfcdf7" stop-opacity=".46"/>
+      <stop offset=".93" stop-color="#dac6f5" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#d6c1f3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hub-shadow" gradientUnits="userSpaceOnUse" cx="234.100" cy="224.700" r="55.8">
+      <stop offset=".66" stop-color="#7358a8" stop-opacity=".86"/>
+      <stop offset=".75" stop-color="#8065b4" stop-opacity=".86"/>
+      <stop offset=".82" stop-color="#896fba" stop-opacity=".52"/>
+      <stop offset=".9" stop-color="#947ac2" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#9a83ca" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hub-dome" gradientUnits="userSpaceOnUse" cx="208" cy="209" r="68" gradientTransform="rotate(90 228.8 229.5)">
+      <stop stop-color="#e1cffb"/>
+      <stop offset=".22" stop-color="#dcc8f7"/>
+      <stop offset=".47" stop-color="#cfb9ef"/>
+      <stop offset=".68" stop-color="#c3aae7"/>
+      <stop offset=".86" stop-color="#b093db"/>
+      <stop offset="1" stop-color="#8065b5"/>
+    </radialGradient>
+    <radialGradient id="hub-rim" gradientUnits="userSpaceOnUse" cx="228.5" cy="229.2" r="45" gradientTransform="rotate(90 228.8 229.5)">
+      <stop offset=".88" stop-color="#967bc6" stop-opacity="0"/>
+      <stop offset="1" stop-color="#8669b8" stop-opacity=".16"/>
+    </radialGradient>
+    <radialGradient id="hub-alpha">
+      <stop offset=".925" stop-color="#fff"/>
+      <stop offset=".951" stop-color="#fff" stop-opacity=".89"/>
+      <stop offset=".974" stop-color="#fff" stop-opacity=".54"/>
+      <stop offset=".992" stop-color="#fff" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="hub-silhouette" maskUnits="userSpaceOnUse" x="182" y="183" width="93" height="93">
+      <circle cx="228.8" cy="229.5" r="45.3" fill="url(#hub-alpha)"/>
+    </mask>
+  </defs>
+  <g id="ground-shadow">
+    <ellipse id="shadow-ambient" cx="177.000" cy="434" rx="175.000" ry="35" fill="url(#ground-ambient)"/>
+    <ellipse id="shadow-left-spread" cx="287.000" cy="438" rx="121.000" ry="25" fill="url(#ground-ambient)" opacity=".25"/>
+    <ellipse id="shadow-contact" cx="195.000" cy="446" rx="121.000" ry="18" fill="url(#ground-contact)"/>
+  </g>
+  <g id="gear-body" mask="url(#soft-silhouette)">
+    <rect id="body-color" width="470" height="474" fill="url(#sky-face)"/>
+    <g id="tooth-ambient-shading" fill="url(#sky-edge-shade)">
+      <ellipse id="ambient-field-01" cx="411.178" cy="279.274" rx="24" ry="35" transform="rotate(162.304 411.178 279.274)" opacity="0.126"/>
+      <ellipse id="ambient-field-02" cx="398.168" cy="281.211" rx="24" ry="35" transform="rotate(175.588 398.168 281.211)" opacity="0.202"/>
+      <ellipse id="ambient-field-03" cx="385.453" cy="282.644" rx="24" ry="35" transform="rotate(167.309 385.453 282.644)" opacity="0.155"/>
+      <ellipse id="ambient-field-04" cx="356.897" cy="386.808" rx="24" ry="35" transform="rotate(145.086 356.897 386.808)" opacity="0.034"/>
+      <ellipse id="ambient-field-05" cx="345.202" cy="392.936" rx="24" ry="35" transform="rotate(162.515 345.202 392.936)" opacity="0.127"/>
+      <ellipse id="ambient-field-06" cx="331.908" cy="393.585" rx="24" ry="35" transform="rotate(-165.773 331.908 393.585)" opacity="0.293"/>
+      <ellipse id="ambient-field-07" cx="319.940" cy="387.997" rx="24" ry="35" transform="rotate(-148.134 319.940 387.997)" opacity="0.347"/>
+      <ellipse id="ambient-field-08" cx="309.284" cy="380.549" rx="24" ry="35" transform="rotate(-145.264 309.284 380.549)" opacity="0.352"/>
+      <ellipse id="ambient-field-09" cx="298.218" cy="374.496" rx="24" ry="35" transform="rotate(-161.875 298.218 374.496)" opacity="0.309"/>
+      <ellipse id="ambient-field-10" cx="285.946" cy="374.007" rx="24" ry="35" transform="rotate(169.581 285.946 374.007)" opacity="0.168"/>
+      <ellipse id="ambient-field-11" cx="253.141" cy="424.986" rx="24" ry="35" transform="rotate(149.690 253.141 424.986)" opacity="0.056"/>
+      <ellipse id="ambient-field-12" cx="240.488" cy="428.997" rx="24" ry="35" transform="rotate(174.148 240.488 428.997)" opacity="0.193"/>
+      <ellipse id="ambient-field-13" cx="227.414" cy="428.867" rx="24" ry="35" transform="rotate(-178.316 227.414 428.867)" opacity="0.234"/>
+      <ellipse id="ambient-field-14" cx="214.420" cy="428.289" rx="24" ry="35" transform="rotate(-175.120 214.420 428.289)" opacity="0.251"/>
+      <ellipse id="ambient-field-15" cx="201.471" cy="426.048" rx="24" ry="35" transform="rotate(-162.926 201.471 426.048)" opacity="0.305"/>
+      <ellipse id="ambient-field-16" cx="189.778" cy="419.861" rx="24" ry="35" transform="rotate(-142.218 189.778 419.861)" opacity="0.356"/>
+      <ellipse id="ambient-field-17" cx="181.393" cy="409.568" rx="24" ry="35" transform="rotate(-115.230 181.393 409.568)" opacity="0.332"/>
+      <ellipse id="ambient-field-18" cx="177.920" cy="396.854" rx="24" ry="35" transform="rotate(-99.642 177.920 396.854)" opacity="0.273"/>
+      <ellipse id="ambient-field-19" cx="175.139" cy="384.449" rx="24" ry="35" transform="rotate(-111.482 175.139 384.449)" opacity="0.320"/>
+      <ellipse id="ambient-field-20" cx="168.758" cy="373.653" rx="24" ry="35" transform="rotate(-131.835 168.758 373.653)" opacity="0.359"/>
+      <ellipse id="ambient-field-21" cx="158.376" cy="367.923" rx="24" ry="35" transform="rotate(-175.637 158.376 367.923)" opacity="0.248"/>
+      <ellipse id="ambient-field-22" cx="146.479" cy="371.093" rx="24" ry="35" transform="rotate(155.334 146.479 371.093)" opacity="0.086"/>
+      <ellipse id="ambient-field-23" cx="135.298" cy="377.404" rx="24" ry="35" transform="rotate(149.220 135.298 377.404)" opacity="0.054"/>
+      <ellipse id="ambient-field-24" cx="123.630" cy="383.390" rx="24" ry="35" transform="rotate(159.581 123.630 383.390)" opacity="0.110"/>
+      <ellipse id="ambient-field-25" cx="110.543" cy="385.489" rx="24" ry="35" transform="rotate(-176.913 110.543 385.489)" opacity="0.242"/>
+      <ellipse id="ambient-field-26" cx="97.729" cy="382.115" rx="24" ry="35" transform="rotate(-154.292 97.729 382.115)" opacity="0.333"/>
+      <ellipse id="ambient-field-27" cx="86.737" cy="374.869" rx="24" ry="35" transform="rotate(-140.181 86.737 374.869)" opacity="0.358"/>
+      <ellipse id="ambient-field-28" cx="77.354" cy="365.753" rx="24" ry="35" transform="rotate(-132.118 77.354 365.753)" opacity="0.359"/>
+      <ellipse id="ambient-field-29" cx="69.070" cy="355.650" rx="24" ry="35" transform="rotate(-125.390 69.070 355.650)" opacity="0.353"/>
+      <ellipse id="ambient-field-30" cx="63.135" cy="343.837" rx="24" ry="35" transform="rotate(-106.135 63.135 343.837)" opacity="0.301"/>
+      <ellipse id="ambient-field-31" cx="62.419" cy="330.567" rx="24" ry="35" transform="rotate(-79.440 62.419 330.567)" opacity="0.167"/>
+      <ellipse id="ambient-field-32" cx="67.589" cy="318.361" rx="24" ry="35" transform="rotate(-56.261 67.589 318.361)" opacity="0.040"/>
+      <ellipse id="ambient-field-33" cx="75.728" cy="308.167" rx="24" ry="35" transform="rotate(-50.635 75.728 308.167)" opacity="0.016"/>
+      <ellipse id="ambient-field-34" cx="82.837" cy="297.715" rx="24" ry="35" transform="rotate(-66.204 82.837 297.715)" opacity="0.091"/>
+      <ellipse id="ambient-field-35" cx="83.674" cy="285.833" rx="24" ry="35" transform="rotate(-107.529 83.674 285.833)" opacity="0.306"/>
+      <ellipse id="ambient-field-36" cx="77.227" cy="275.428" rx="24" ry="35" transform="rotate(-140.003 77.227 275.428)" opacity="0.358"/>
+      <ellipse id="ambient-field-37" cx="65.808" cy="270.761" rx="24" ry="35" transform="rotate(-167.936 65.808 270.761)" opacity="0.284"/>
+      <ellipse id="ambient-field-38" cx="53.062" cy="268.305" rx="24" ry="35" transform="rotate(-166.306 53.062 268.305)" opacity="0.291"/>
+      <ellipse id="ambient-field-39" cx="40.795" cy="263.359" rx="24" ry="35" transform="rotate(-145.898 40.795 263.359)" opacity="0.351"/>
+      <ellipse id="ambient-field-40" cx="31.933" cy="253.450" rx="24" ry="35" transform="rotate(-117.889 31.933 253.450)" opacity="0.339"/>
+      <ellipse id="ambient-field-41" cx="28.397" cy="240.665" rx="24" ry="35" transform="rotate(-94.301 28.397 240.665)" opacity="0.248"/>
+      <ellipse id="ambient-field-42" cx="28.520" cy="227.666" rx="24" ry="35" transform="rotate(-91.016 28.520 227.666)" opacity="0.231"/>
+      <ellipse id="ambient-field-43" cx="28.320" cy="214.671" rx="24" ry="35" transform="rotate(-88.422 28.320 214.671)" opacity="0.217"/>
+      <ellipse id="ambient-field-44" cx="29.899" cy="201.628" rx="24" ry="35" transform="rotate(-76.254 29.899 201.628)" opacity="0.148"/>
+      <ellipse id="ambient-field-45" cx="35.648" cy="189.654" rx="24" ry="35" transform="rotate(-49.906 35.648 189.654)" opacity="0.013"/>
+      <ellipse id="ambient-field-46" cx="90.002" cy="162.942" rx="24" ry="35" transform="rotate(-79.067 90.002 162.942)" opacity="0.165"/>
+      <ellipse id="ambient-field-47" cx="88.546" cy="150.854" rx="24" ry="35" transform="rotate(-113.381 88.546 150.854)" opacity="0.326"/>
+      <ellipse id="ambient-field-48" cx="81.470" cy="140.345" rx="24" ry="35" transform="rotate(-127.633 81.470 140.345)" opacity="0.356"/>
+      <ellipse id="ambient-field-49" cx="74.281" cy="129.314" rx="24" ry="35" transform="rotate(-113.314 74.281 129.314)" opacity="0.326"/>
+      <ellipse id="ambient-field-50" cx="71.990" cy="116.192" rx="24" ry="35" transform="rotate(-85.381 71.990 116.192)" opacity="0.200"/>
+      <ellipse id="ambient-field-51" cx="76.664" cy="103.745" rx="24" ry="35" transform="rotate(-58.272 76.664 103.745)" opacity="0.049"/>
+      <ellipse id="ambient-field-52" cx="84.553" cy="93.305" rx="24" ry="35" transform="rotate(-50.026 84.553 93.305)" opacity="0.013"/>
+      <ellipse id="ambient-field-53" cx="191.136" cy="70.773" rx="24" ry="35" transform="rotate(-74.304 191.136 70.773)" opacity="0.137"/>
+      <ellipse id="ambient-field-54" cx="193.063" cy="58.108" rx="24" ry="35" transform="rotate(-81.506 193.063 58.108)" opacity="0.179"/>
+      <ellipse id="ambient-field-55" cx="196.678" cy="45.413" rx="24" ry="35" transform="rotate(-64.271 196.678 45.413)" opacity="0.081"/>
+    </g>
+    <g id="tooth-edge-depth" fill="url(#sky-rollover)" mask="url(#rounded-tooth-falloff)">
+      <ellipse id="depth-field-01" cx="424.839" cy="275.168" rx="23" ry="27" transform="rotate(138.291 424.839 275.168)" opacity="0.011"/>
+      <ellipse id="depth-field-02" cx="412.090" cy="282.132" rx="23" ry="27" transform="rotate(162.304 412.090 282.132)" opacity="0.182"/>
+      <ellipse id="depth-field-03" cx="398.399" cy="284.202" rx="23" ry="27" transform="rotate(175.588 398.399 284.202)" opacity="0.291"/>
+      <ellipse id="depth-field-04" cx="386.112" cy="285.571" rx="23" ry="27" transform="rotate(167.309 386.112 285.571)" opacity="0.223"/>
+      <ellipse id="depth-field-05" cx="358.614" cy="389.268" rx="23" ry="27" transform="rotate(145.086 358.614 389.268)" opacity="0.049"/>
+      <ellipse id="depth-field-06" cx="346.103" cy="395.797" rx="23" ry="27" transform="rotate(162.515 346.103 395.797)" opacity="0.183"/>
+      <ellipse id="depth-field-07" cx="331.171" cy="396.493" rx="23" ry="27" transform="rotate(-165.773 331.171 396.493)" opacity="0.424"/>
+      <ellipse id="depth-field-08" cx="318.356" cy="390.545" rx="23" ry="27" transform="rotate(-148.134 318.356 390.545)" opacity="0.502"/>
+      <ellipse id="depth-field-09" cx="307.575" cy="383.015" rx="23" ry="27" transform="rotate(-145.264 307.575 383.015)" opacity="0.509"/>
+      <ellipse id="depth-field-10" cx="297.285" cy="377.347" rx="23" ry="27" transform="rotate(-161.875 297.285 377.347)" opacity="0.446"/>
+      <ellipse id="depth-field-11" cx="286.489" cy="376.957" rx="23" ry="27" transform="rotate(169.581 286.489 376.957)" opacity="0.242"/>
+      <ellipse id="depth-field-12" cx="254.655" cy="427.576" rx="23" ry="27" transform="rotate(149.690 254.655 427.576)" opacity="0.082"/>
+      <ellipse id="depth-field-13" cx="240.794" cy="431.981" rx="23" ry="27" transform="rotate(174.148 240.794 431.981)" opacity="0.279"/>
+      <ellipse id="depth-field-14" cx="227.326" cy="431.866" rx="23" ry="27" transform="rotate(-178.316 227.326 431.866)" opacity="0.338"/>
+      <ellipse id="depth-field-15" cx="214.165" cy="431.278" rx="23" ry="27" transform="rotate(-175.120 214.165 431.278)" opacity="0.362"/>
+      <ellipse id="depth-field-16" cx="200.590" cy="428.916" rx="23" ry="27" transform="rotate(-162.926 200.590 428.916)" opacity="0.440"/>
+      <ellipse id="depth-field-17" cx="187.940" cy="422.232" rx="23" ry="27" transform="rotate(-142.218 187.940 422.232)" opacity="0.514"/>
+      <ellipse id="depth-field-18" cx="178.679" cy="410.847" rx="23" ry="27" transform="rotate(-115.230 178.679 410.847)" opacity="0.479"/>
+      <ellipse id="depth-field-19" cx="174.963" cy="397.356" rx="23" ry="27" transform="rotate(-99.642 174.963 397.356)" opacity="0.395"/>
+      <ellipse id="depth-field-20" cx="172.348" cy="385.548" rx="23" ry="27" transform="rotate(-111.482 172.348 385.548)" opacity="0.463"/>
+      <ellipse id="depth-field-21" cx="166.523" cy="375.654" rx="23" ry="27" transform="rotate(-131.835 166.523 375.654)" opacity="0.519"/>
+      <ellipse id="depth-field-22" cx="158.148" cy="370.915" rx="23" ry="27" transform="rotate(-175.637 158.148 370.915)" opacity="0.358"/>
+      <ellipse id="depth-field-23" cx="147.731" cy="373.820" rx="23" ry="27" transform="rotate(155.334 147.731 373.820)" opacity="0.125"/>
+      <ellipse id="depth-field-24" cx="136.833" cy="379.982" rx="23" ry="27" transform="rotate(149.220 136.833 379.982)" opacity="0.078"/>
+      <ellipse id="depth-field-25" cx="124.677" cy="386.202" rx="23" ry="27" transform="rotate(159.581 124.677 386.202)" opacity="0.159"/>
+      <ellipse id="depth-field-26" cx="110.382" cy="388.485" rx="23" ry="27" transform="rotate(-176.913 110.382 388.485)" opacity="0.349"/>
+      <ellipse id="depth-field-27" cx="96.427" cy="384.818" rx="23" ry="27" transform="rotate(-154.292 96.427 384.818)" opacity="0.481"/>
+      <ellipse id="depth-field-28" cx="84.816" cy="377.173" rx="23" ry="27" transform="rotate(-140.181 84.816 377.173)" opacity="0.517"/>
+      <ellipse id="depth-field-29" cx="75.129" cy="367.765" rx="23" ry="27" transform="rotate(-132.118 75.129 367.765)" opacity="0.519"/>
+      <ellipse id="depth-field-30" cx="66.625" cy="357.388" rx="23" ry="27" transform="rotate(-125.390 66.625 357.388)" opacity="0.510"/>
+      <ellipse id="depth-field-31" cx="60.253" cy="344.671" rx="23" ry="27" transform="rotate(-106.135 60.253 344.671)" opacity="0.435"/>
+      <ellipse id="depth-field-32" cx="59.469" cy="330.017" rx="23" ry="27" transform="rotate(-79.440 59.469 330.017)" opacity="0.241"/>
+      <ellipse id="depth-field-33" cx="65.094" cy="316.695" rx="23" ry="27" transform="rotate(-56.261 65.094 316.695)" opacity="0.057"/>
+      <ellipse id="depth-field-34" cx="73.409" cy="306.265" rx="23" ry="27" transform="rotate(-50.635 73.409 306.265)" opacity="0.023"/>
+      <ellipse id="depth-field-35" cx="80.092" cy="296.504" rx="23" ry="27" transform="rotate(-66.204 80.092 296.504)" opacity="0.132"/>
+      <ellipse id="depth-field-36" cx="80.814" cy="286.736" rx="23" ry="27" transform="rotate(-107.529 80.814 286.736)" opacity="0.442"/>
+      <ellipse id="depth-field-37" cx="75.299" cy="277.726" rx="23" ry="27" transform="rotate(-140.003 75.299 277.726)" opacity="0.517"/>
+      <ellipse id="depth-field-38" cx="65.181" cy="273.695" rx="23" ry="27" transform="rotate(-167.936 65.181 273.695)" opacity="0.410"/>
+      <ellipse id="depth-field-39" cx="52.352" cy="271.220" rx="23" ry="27" transform="rotate(-166.306 52.352 271.220)" opacity="0.420"/>
+      <ellipse id="depth-field-40" cx="39.113" cy="265.843" rx="23" ry="27" transform="rotate(-145.898 39.113 265.843)" opacity="0.507"/>
+      <ellipse id="depth-field-41" cx="29.281" cy="254.853" rx="23" ry="27" transform="rotate(-117.889 29.281 254.853)" opacity="0.489"/>
+      <ellipse id="depth-field-42" cx="25.405" cy="240.890" rx="23" ry="27" transform="rotate(-94.301 25.405 240.890)" opacity="0.358"/>
+      <ellipse id="depth-field-43" cx="25.520" cy="227.720" rx="23" ry="27" transform="rotate(-91.016 25.520 227.720)" opacity="0.333"/>
+      <ellipse id="depth-field-44" cx="25.321" cy="214.589" rx="23" ry="27" transform="rotate(-88.422 25.321 214.589)" opacity="0.313"/>
+      <ellipse id="depth-field-45" cx="26.985" cy="200.915" rx="23" ry="27" transform="rotate(-76.254 26.985 200.915)" opacity="0.214"/>
+      <ellipse id="depth-field-46" cx="33.353" cy="187.722" rx="23" ry="27" transform="rotate(-49.906 33.353 187.722)" opacity="0.019"/>
+      <ellipse id="depth-field-47" cx="87.056" cy="162.373" rx="23" ry="27" transform="rotate(-79.067 87.056 162.373)" opacity="0.238"/>
+      <ellipse id="depth-field-48" cx="85.792" cy="152.045" rx="23" ry="27" transform="rotate(-113.381 85.792 152.045)" opacity="0.471"/>
+      <ellipse id="depth-field-49" cx="79.094" cy="142.176" rx="23" ry="27" transform="rotate(-127.633 79.094 142.176)" opacity="0.514"/>
+      <ellipse id="depth-field-50" cx="71.526" cy="130.501" rx="23" ry="27" transform="rotate(-113.314 71.526 130.501)" opacity="0.471"/>
+      <ellipse id="depth-field-51" cx="69.000" cy="115.951" rx="23" ry="27" transform="rotate(-85.381 69.000 115.951)" opacity="0.289"/>
+      <ellipse id="depth-field-52" cx="74.112" cy="102.167" rx="23" ry="27" transform="rotate(-58.272 74.112 102.167)" opacity="0.071"/>
+      <ellipse id="depth-field-53" cx="82.253" cy="91.378" rx="23" ry="27" transform="rotate(-50.026 82.253 91.378)" opacity="0.019"/>
+      <ellipse id="depth-field-54" cx="188.248" cy="69.961" rx="23" ry="27" transform="rotate(-74.304 188.248 69.961)" opacity="0.198"/>
+      <ellipse id="depth-field-55" cx="190.096" cy="57.665" rx="23" ry="27" transform="rotate(-81.506 190.096 57.665)" opacity="0.258"/>
+      <ellipse id="depth-field-56" cx="193.975" cy="44.110" rx="23" ry="27" transform="rotate(-64.271 193.975 44.110)" opacity="0.116"/>
+    </g>
+    <g id="tooth-highlights" fill="url(#sky-edge-sheen)">
+      <ellipse id="highlight-field-01" cx="231.021" cy="33.600" rx="24" ry="28" transform="rotate(-0.593 231.021 33.600)" opacity="0.255"/>
+      <ellipse id="highlight-field-02" cx="243.923" cy="33.631" rx="24" ry="28" transform="rotate(0.867 243.923 33.631)" opacity="0.266"/>
+      <ellipse id="highlight-field-03" cx="256.485" cy="34.584" rx="24" ry="28" transform="rotate(10.589 256.485 34.584)" opacity="0.335"/>
+      <ellipse id="highlight-field-04" cx="267.642" cy="38.997" rx="24" ry="28" transform="rotate(35.019 267.642 38.997)" opacity="0.449"/>
+      <ellipse id="highlight-field-05" cx="275.712" cy="47.871" rx="24" ry="28" transform="rotate(59.751 275.712 47.871)" opacity="0.435"/>
+      <ellipse id="highlight-field-06" cx="279.680" cy="59.396" rx="24" ry="28" transform="rotate(79.547 279.680 59.396)" opacity="0.334"/>
+      <ellipse id="highlight-field-07" cx="281.270" cy="72.159" rx="24" ry="28" transform="rotate(82.093 281.270 72.159)" opacity="0.317"/>
+      <ellipse id="highlight-field-08" cx="285.272" cy="85.261" rx="24" ry="28" transform="rotate(57.456 285.272 85.261)" opacity="0.442"/>
+      <ellipse id="highlight-field-09" cx="296.737" cy="93.439" rx="24" ry="28" transform="rotate(14.673 296.737 93.439)" opacity="0.361"/>
+      <ellipse id="highlight-field-10" cx="310.528" cy="93.257" rx="24" ry="28" transform="rotate(-13.361 310.528 93.257)" opacity="0.159"/>
+      <ellipse id="highlight-field-11" cx="322.981" cy="87.913" rx="24" ry="28" transform="rotate(-32.276 322.981 87.913)" opacity="0.038"/>
+      <ellipse id="highlight-field-12" cx="333.452" cy="80.148" rx="24" ry="28" transform="rotate(-34.844 333.452 80.148)" opacity="0.026"/>
+      <ellipse id="highlight-field-13" cx="344.232" cy="75.216" rx="24" ry="28" transform="rotate(-6.939 344.232 75.216)" opacity="0.207"/>
+      <ellipse id="highlight-field-14" cx="355.734" cy="77.622" rx="24" ry="28" transform="rotate(23.200 355.734 77.622)" opacity="0.407"/>
+      <ellipse id="highlight-field-15" cx="366.391" cy="83.993" rx="24" ry="28" transform="rotate(37.530 366.391 83.993)" opacity="0.454"/>
+      <ellipse id="highlight-field-16" cx="375.560" cy="92.589" rx="24" ry="28" transform="rotate(48.013 375.560 92.589)" opacity="0.459"/>
+      <ellipse id="highlight-field-17" cx="383.317" cy="102.590" rx="24" ry="28" transform="rotate(56.185 383.317 102.590)" opacity="0.446"/>
+      <ellipse id="highlight-field-18" cx="389.661" cy="113.591" rx="24" ry="28" transform="rotate(63.167 389.661 113.591)" opacity="0.423"/>
+      <ellipse id="highlight-field-19" cx="394.468" cy="124.941" rx="24" ry="28" transform="rotate(79.748 394.468 124.941)" opacity="0.333"/>
+      <ellipse id="highlight-field-20" cx="392.218" cy="135.898" rx="24" ry="28" transform="rotate(121.305 392.218 135.898)" opacity="0.043"/>
+      <ellipse id="highlight-field-21" cx="375.804" cy="155.923" rx="24" ry="28" transform="rotate(120.009 375.804 155.923)" opacity="0.049"/>
+      <ellipse id="highlight-field-22" cx="371.572" cy="169.003" rx="24" ry="28" transform="rotate(93.740 371.572 169.003)" opacity="0.231"/>
+      <ellipse id="highlight-field-23" cx="375.367" cy="182.535" rx="24" ry="28" transform="rotate(52.640 375.367 182.535)" opacity="0.453"/>
+      <ellipse id="highlight-field-24" cx="387.216" cy="189.931" rx="24" ry="28" transform="rotate(14.658 387.216 189.931)" opacity="0.361"/>
+      <ellipse id="highlight-field-25" cx="400.170" cy="192.222" rx="24" ry="28" transform="rotate(8.637 400.170 192.222)" opacity="0.322"/>
+      <ellipse id="highlight-field-26" cx="412.430" cy="194.899" rx="24" ry="28" transform="rotate(19.611 412.430 194.899)" opacity="0.389"/>
+      <ellipse id="highlight-field-27" cx="422.680" cy="201.273" rx="24" ry="28" transform="rotate(41.835 422.680 201.273)" opacity="0.459"/>
+      <ellipse id="highlight-field-28" cx="429.505" cy="210.882" rx="24" ry="28" transform="rotate(70.372 429.505 210.882)" opacity="0.389"/>
+      <ellipse id="highlight-field-29" cx="431.343" cy="223.008" rx="24" ry="28" transform="rotate(88.618 431.343 223.008)" opacity="0.270"/>
+      <ellipse id="highlight-field-30" cx="430.834" cy="235.767" rx="24" ry="28" transform="rotate(93.746 430.834 235.767)" opacity="0.231"/>
+      <ellipse id="highlight-field-31" cx="429.857" cy="248.584" rx="24" ry="28" transform="rotate(96.511 429.857 248.584)" opacity="0.210"/>
+      <ellipse id="highlight-field-32" cx="427.313" cy="260.773" rx="24" ry="28" transform="rotate(110.085 427.313 260.773)" opacity="0.110"/>
+      <ellipse id="highlight-field-33" cx="367.041" cy="299.293" rx="24" ry="28" transform="rotate(96.518 367.041 299.293)" opacity="0.210"/>
+      <ellipse id="highlight-field-34" cx="369.276" cy="312.903" rx="24" ry="28" transform="rotate(68.091 369.276 312.903)" opacity="0.401"/>
+      <ellipse id="highlight-field-35" cx="375.848" cy="324.548" rx="24" ry="28" transform="rotate(55.269 375.848 324.548)" opacity="0.448"/>
+      <ellipse id="highlight-field-36" cx="383.157" cy="334.958" rx="24" ry="28" transform="rotate(61.549 383.157 334.958)" opacity="0.429"/>
+      <ellipse id="highlight-field-37" cx="385.887" cy="346.259" rx="24" ry="28" transform="rotate(94.301 385.887 346.259)" opacity="0.227"/>
+      <ellipse id="highlight-field-38" cx="381.802" cy="357.392" rx="24" ry="28" transform="rotate(122.012 381.802 357.392)" opacity="0.039"/>
+      <ellipse id="highlight-field-39" cx="273.018" cy="377.583" rx="24" ry="28" transform="rotate(128.018 273.018 377.583)" opacity="0.014"/>
+      <ellipse id="highlight-field-40" cx="267.907" cy="390.289" rx="24" ry="28" transform="rotate(103.738 267.907 390.289)" opacity="0.156"/>
+      <ellipse id="highlight-field-41" cx="264.947" cy="402.850" rx="24" ry="28" transform="rotate(105.073 264.947 402.850)" opacity="0.146"/>
+      <ellipse id="highlight-field-42" cx="260.236" cy="414.151" rx="24" ry="28" transform="rotate(123.433 260.236 414.151)" opacity="0.032"/>
+      <ellipse id="highlight-field-43" cx="47.628" cy="184.647" rx="24" ry="28" transform="rotate(-23.301 47.628 184.647)" opacity="0.089"/>
+      <ellipse id="highlight-field-44" cx="59.599" cy="181.644" rx="24" ry="28" transform="rotate(-6.962 59.599 181.644)" opacity="0.207"/>
+      <ellipse id="highlight-field-45" cx="72.607" cy="180.485" rx="24" ry="28" transform="rotate(-10.303 72.607 180.485)" opacity="0.182"/>
+      <ellipse id="highlight-field-46" cx="85.365" cy="175.374" rx="24" ry="28" transform="rotate(-36.608 85.365 175.374)" opacity="0.019"/>
+      <ellipse id="highlight-field-47" cx="105.014" cy="77.775" rx="24" ry="28" transform="rotate(-33.369 105.014 77.775)" opacity="0.033"/>
+      <ellipse id="highlight-field-48" cx="116.080" cy="72.253" rx="24" ry="28" transform="rotate(-17.701 116.080 72.253)" opacity="0.127"/>
+      <ellipse id="highlight-field-49" cx="127.981" cy="71.149" rx="24" ry="28" transform="rotate(7.536 127.981 71.149)" opacity="0.314"/>
+      <ellipse id="highlight-field-50" cx="139.229" cy="75.203" rx="24" ry="28" transform="rotate(32.649 139.229 75.203)" opacity="0.443"/>
+      <ellipse id="highlight-field-51" cx="149.235" cy="83.114" rx="24" ry="28" transform="rotate(38.076 149.235 83.114)" opacity="0.454"/>
+      <ellipse id="highlight-field-52" cx="161.237" cy="89.641" rx="24" ry="28" transform="rotate(14.543 161.237 89.641)" opacity="0.360"/>
+      <ellipse id="highlight-field-53" cx="174.961" cy="89.992" rx="24" ry="28" transform="rotate(-10.492 174.961 89.992)" opacity="0.180"/>
+      <ellipse id="highlight-field-54" cx="206.942" cy="37.794" rx="24" ry="28" transform="rotate(-33.025 206.942 37.794)" opacity="0.034"/>
+      <ellipse id="highlight-field-55" cx="218.264" cy="34.230" rx="24" ry="28" transform="rotate(-5.689 218.264 34.230)" opacity="0.217"/>
+    </g>
+    <circle id="socket-highlight" cx="220.600" cy="238.400" r="105" fill="url(#socket-light)"/>
+    <circle id="socket-occlusion" cx="236.200" cy="220.400" r="104" fill="url(#socket-shadow)"/>
+    <circle id="socket-lip" cx="228.6" cy="229" r="87" fill="url(#socket-seam)"/>
+  </g>
+  <g id="center-ring" mask="url(#ring-silhouette)">
+    <circle id="ring-face" cx="228.6" cy="229" r="82" fill="url(#lavender-face)"/>
+    <circle id="ring-sheen" cx="228.6" cy="229" r="82" fill="url(#lavender-sheen)"/>
+    <circle id="ring-shoulder" cx="228.6" cy="229" r="82" fill="url(#lavender-shoulder)"/>
+    <circle id="ring-outer-edge" cx="228.6" cy="229" r="82" fill="url(#lavender-rim)"/>
+    <circle id="ring-inner-highlight" cx="223.500" cy="234.500" r="59" fill="url(#hub-light)"/>
+    <circle id="ring-inner-shadow" cx="234.100" cy="224.700" r="55.8" fill="url(#hub-shadow)"/>
+  </g>
+  <g id="center-hub" mask="url(#hub-silhouette)">
+    <circle id="hub-face" cx="228.8" cy="229.5" r="45.3" fill="url(#hub-dome)"/>
+    <circle id="hub-edge" cx="228.8" cy="229.5" r="45.3" fill="url(#hub-rim)"/>
+  </g>
+</svg>
