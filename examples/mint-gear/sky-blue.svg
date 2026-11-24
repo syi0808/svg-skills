@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="470" height="474" viewBox="0 0 470 474" role="img" aria-labelledby="gear-title gear-description">
   <title id="gear-title">Sky blue gear</title>
-  <desc id="gear-description">A softly rounded sky blue gear with eight shaded teeth and a lime green center, floating above a soft shadow.</desc>
+  <desc id="gear-description">A softly rounded sky blue gear with eight shaded teeth and a lavender center, floating above a soft shadow.</desc>
   <defs>
     <radialGradient id="ground-ambient">
       <stop stop-color="#252b1e" stop-opacity=".224"/>
@@ -194,64 +194,64 @@
       <stop offset=".962" stop-color="#4b8395" stop-opacity=".44"/>
       <stop offset="1" stop-color="#77b2c9" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="lime-face" gradientUnits="userSpaceOnUse" x1="176" y1="164" x2="284" y2="297">
-      <stop stop-color="#d0eb85"/>
-      <stop offset=".5" stop-color="#c3e173"/>
-      <stop offset="1" stop-color="#bfde71"/>
+    <linearGradient id="lavender-face" gradientUnits="userSpaceOnUse" x1="176" y1="164" x2="284" y2="297">
+      <stop stop-color="#d9c8f5"/>
+      <stop offset=".5" stop-color="#cdb7ee"/>
+      <stop offset="1" stop-color="#c9b0ec"/>
     </linearGradient>
-    <radialGradient id="lime-sheen" gradientUnits="userSpaceOnUse" cx="178" cy="178" r="58">
-      <stop stop-color="#dcfa92" stop-opacity=".65"/>
-      <stop offset=".5" stop-color="#d9f593" stop-opacity=".42"/>
-      <stop offset="1" stop-color="#dbf492" stop-opacity="0"/>
+    <radialGradient id="lavender-sheen" gradientUnits="userSpaceOnUse" cx="178" cy="178" r="58">
+      <stop stop-color="#e9dafa" stop-opacity=".65"/>
+      <stop offset=".5" stop-color="#e4d3f8" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#e0cdf7" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="lime-shoulder" gradientUnits="userSpaceOnUse" cx="219" cy="221" r="92">
-      <stop offset=".66" stop-color="#82b642" stop-opacity="0"/>
-      <stop offset=".76" stop-color="#82b642" stop-opacity=".13"/>
-      <stop offset=".84" stop-color="#7ab13d" stop-opacity=".43"/>
-      <stop offset=".91" stop-color="#6ca73b" stop-opacity=".67"/>
-      <stop offset=".97" stop-color="#669c35" stop-opacity=".8"/>
-      <stop offset="1" stop-color="#5d9333" stop-opacity=".86"/>
+    <radialGradient id="lavender-shoulder" gradientUnits="userSpaceOnUse" cx="219" cy="221" r="92">
+      <stop offset=".66" stop-color="#a189d2" stop-opacity="0"/>
+      <stop offset=".76" stop-color="#a189d2" stop-opacity=".13"/>
+      <stop offset=".84" stop-color="#977dc9" stop-opacity=".43"/>
+      <stop offset=".91" stop-color="#886dbd" stop-opacity=".67"/>
+      <stop offset=".97" stop-color="#7c60b1" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#7054a3" stop-opacity=".86"/>
     </radialGradient>
-    <radialGradient id="lime-rim" gradientUnits="userSpaceOnUse" cx="228.6" cy="229" r="81">
-      <stop offset=".88" stop-color="#5b923f" stop-opacity="0"/>
-      <stop offset=".93" stop-color="#548b3b" stop-opacity=".10"/>
-      <stop offset=".97" stop-color="#4b8335" stop-opacity=".38"/>
-      <stop offset="1" stop-color="#477e33" stop-opacity=".74"/>
+    <radialGradient id="lavender-rim" gradientUnits="userSpaceOnUse" cx="228.6" cy="229" r="81">
+      <stop offset=".88" stop-color="#8066b3" stop-opacity="0"/>
+      <stop offset=".93" stop-color="#755daa" stop-opacity=".10"/>
+      <stop offset=".97" stop-color="#6a529c" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#5d478c" stop-opacity=".74"/>
     </radialGradient>
-    <radialGradient id="lime-alpha">
+    <radialGradient id="ring-alpha">
       <stop offset=".980" stop-color="#fff"/>
       <stop offset=".990" stop-color="#fff" stop-opacity=".8"/>
       <stop offset=".996" stop-color="#fff" stop-opacity=".38"/>
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </radialGradient>
     <mask id="ring-silhouette" maskUnits="userSpaceOnUse" x="145" y="145" width="167" height="168">
-      <circle cx="228.6" cy="229" r="81.5" fill="url(#lime-alpha)"/>
+      <circle cx="228.6" cy="229" r="81.5" fill="url(#ring-alpha)"/>
     </mask>
     <radialGradient id="hub-light" gradientUnits="userSpaceOnUse" cx="233.8" cy="234.8" r="59">
-      <stop offset=".61" stop-color="#dbf98d" stop-opacity=".93"/>
-      <stop offset=".72" stop-color="#daf88a" stop-opacity=".84"/>
-      <stop offset=".83" stop-color="#d5f488" stop-opacity=".46"/>
-      <stop offset=".93" stop-color="#d2ef81" stop-opacity=".14"/>
-      <stop offset="1" stop-color="#d2ed81" stop-opacity="0"/>
+      <stop offset=".61" stop-color="#e7d8fc" stop-opacity=".93"/>
+      <stop offset=".72" stop-color="#e4d4fa" stop-opacity=".84"/>
+      <stop offset=".83" stop-color="#dfcdf7" stop-opacity=".46"/>
+      <stop offset=".93" stop-color="#dac6f5" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#d6c1f3" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="hub-shadow" gradientUnits="userSpaceOnUse" cx="224" cy="224.2" r="55.8">
-      <stop offset=".66" stop-color="#73942c" stop-opacity=".86"/>
-      <stop offset=".75" stop-color="#80a038" stop-opacity=".86"/>
-      <stop offset=".82" stop-color="#88a83d" stop-opacity=".52"/>
-      <stop offset=".9" stop-color="#89ac41" stop-opacity=".24"/>
-      <stop offset="1" stop-color="#8cb448" stop-opacity="0"/>
+      <stop offset=".66" stop-color="#7358a8" stop-opacity=".86"/>
+      <stop offset=".75" stop-color="#8065b4" stop-opacity=".86"/>
+      <stop offset=".82" stop-color="#896fba" stop-opacity=".52"/>
+      <stop offset=".9" stop-color="#947ac2" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#9a83ca" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="hub-dome" gradientUnits="userSpaceOnUse" cx="208" cy="209" r="68">
-      <stop stop-color="#d3ee84"/>
-      <stop offset=".22" stop-color="#ceed80"/>
-      <stop offset=".47" stop-color="#c0de71"/>
-      <stop offset=".68" stop-color="#b8d766"/>
-      <stop offset=".86" stop-color="#a7c857"/>
-      <stop offset="1" stop-color="#7ea237"/>
+      <stop stop-color="#e1cffb"/>
+      <stop offset=".22" stop-color="#dcc8f7"/>
+      <stop offset=".47" stop-color="#cfb9ef"/>
+      <stop offset=".68" stop-color="#c3aae7"/>
+      <stop offset=".86" stop-color="#b093db"/>
+      <stop offset="1" stop-color="#8065b5"/>
     </radialGradient>
     <radialGradient id="hub-rim" gradientUnits="userSpaceOnUse" cx="228.5" cy="229.2" r="45">
-      <stop offset=".88" stop-color="#84aa40" stop-opacity="0"/>
-      <stop offset="1" stop-color="#7ea13d" stop-opacity=".16"/>
+      <stop offset=".88" stop-color="#967bc6" stop-opacity="0"/>
+      <stop offset="1" stop-color="#8669b8" stop-opacity=".16"/>
     </radialGradient>
     <radialGradient id="hub-alpha">
       <stop offset=".958" stop-color="#fff"/>
@@ -302,10 +302,10 @@
     <circle id="socket-lip" cx="228.6" cy="229" r="87" fill="url(#socket-seam)"/>
   </g>
   <g id="center-ring" mask="url(#ring-silhouette)">
-    <circle id="ring-face" cx="228.6" cy="229" r="82" fill="url(#lime-face)"/>
-    <circle id="ring-sheen" cx="228.6" cy="229" r="82" fill="url(#lime-sheen)"/>
-    <circle id="ring-shoulder" cx="228.6" cy="229" r="82" fill="url(#lime-shoulder)"/>
-    <circle id="ring-outer-edge" cx="228.6" cy="229" r="82" fill="url(#lime-rim)"/>
+    <circle id="ring-face" cx="228.6" cy="229" r="82" fill="url(#lavender-face)"/>
+    <circle id="ring-sheen" cx="228.6" cy="229" r="82" fill="url(#lavender-sheen)"/>
+    <circle id="ring-shoulder" cx="228.6" cy="229" r="82" fill="url(#lavender-shoulder)"/>
+    <circle id="ring-outer-edge" cx="228.6" cy="229" r="82" fill="url(#lavender-rim)"/>
     <circle id="ring-inner-highlight" cx="233.8" cy="234.8" r="59" fill="url(#hub-light)"/>
     <circle id="ring-inner-shadow" cx="224" cy="224.2" r="55.8" fill="url(#hub-shadow)"/>
   </g>
